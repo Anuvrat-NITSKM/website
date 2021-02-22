@@ -1,0 +1,17 @@
+---
+meta:
+    title: "Anuvrat Resources"
+    description: "Study Resources For You"
+    url: "https://anuvrat.nitsikkim.ac.in/resources/{{ repo.name }}/index.html"
+
+pagination:
+    data: repos
+    size: 1
+    alias: repo
+permalink: "resources/{{ repo.name }}/index.html"
+---
+
+<div>
+    {% renderAndResolveMD repo.readme,
+    repo.name %}
+</div>

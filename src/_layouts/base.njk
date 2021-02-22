@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+    <head>
+
+        {# Meta Info #}
+        {% block meta %}
+            {% include "shared/meta.njk" %}
+        {% endblock %}
+
+        {# CSS #}
+        {% block css %}
+            {% if build.isDev %}
+                <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+            {% else %}
+                {# CDN imports here for production #}
+                <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+            {% endif %}
+        {% endblock %}
+
+    </head>
+    <body>
+
+        {# Header #}
+        {% block header %}
+            {% include "shared/navbar.njk" %}
+        {% endblock %}
+
+        {# Content #}
+        {% block content %}
+            <main id="content">
+                {{ content | safe }}
+            </main>
+        {% endblock %}
+
+        {# Footer #}
+        {% block footer %}
+            {% include "shared/footer.njk" %}
+        {% endblock %}
+
+        {# JS Scripts #}
+        {% block js %}
+            {% if build.isDev %}
+                <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
+            {% else %}
+                {# CDN imports here for production #}
+                <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
+            {% endif %}
+        {% endblock %}
+
+    </body>
+</html>
