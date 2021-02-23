@@ -1,1 +1,30 @@
-@import './bootstrap'
+@import './bootstrap';
+@import './animations';
+
+#content {
+    min-height: 79vh;
+}
+#content > div:not(#home) {
+    padding-top: 30px;
+}
+
+#landing {
+    height: 100vh;
+    background-image: url('/assets/images/landing.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    .container {
+        @extend .m-0, .position-absolute, .text-dark;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// utils
+.no-decoration {
+    @extend .text-decoration-none, .text-reset;
+}
