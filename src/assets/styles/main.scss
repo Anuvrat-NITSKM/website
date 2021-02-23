@@ -1,5 +1,5 @@
-@import './bootstrap';
-@import './animations';
+@import "./bootstrap";
+@import "./animations";
 
 #content {
     min-height: 79vh;
@@ -10,7 +10,7 @@
 
 #landing {
     height: 100vh;
-    background-image: url('/assets/images/landing.jpg');
+    background-image: url("/assets/images/landing.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;

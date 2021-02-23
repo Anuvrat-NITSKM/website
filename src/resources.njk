@@ -2,7 +2,7 @@
     {% for repo in repos %}
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
-                <a href="{{repo.name}}" class="no-decoration">
+                <a href="{{repo.name | slug}}" class="no-decoration">
                     <div class="card shadow-sm">
                         <div class="card-header">{{repo.name | reformatRepoName}}</div>
                         {# Image will be replaced with a thumbnail representing the repo #}

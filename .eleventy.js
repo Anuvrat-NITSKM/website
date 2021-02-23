@@ -6,11 +6,13 @@ const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
 const iconsprite = require('./utils/iconsprite.js')
+const pluginDate = require("eleventy-plugin-date");
 
 module.exports = function (config) {
     // Plugins
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
+    config.addPlugin(pluginDate);
 
     // Filters
     Object.keys(filters).forEach((filterName) => {
