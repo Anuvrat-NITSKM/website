@@ -1,30 +1,43 @@
 @import "./bootstrap";
 @import "./animations";
+@import "./utils";
+@import "./activitiesHover";
 
 #content {
     min-height: 79vh;
 }
 #content > div:not(#home) {
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 #landing {
     height: 100vh;
-    background-image: url("/assets/images/landing.jpg");
+    // background-image: url("/assets/images/landing.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    position: relative;
+    @extend .position-relative, .border-bottom;
     .container {
         @extend .m-0, .position-absolute, .text-dark;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .arrow-btn {
+        bottom: 15px;
+        left: 0px;
+        right: 0px;
+        animation: MoveUpDown 2s linear infinite;
+        @extend .text-center, .position-absolute;
+    }
 }
 
-// utils
-.no-decoration {
-    @extend .text-decoration-none, .text-reset;
+.navbar-nav .nav-item {
+    :not(.active) {
+        @extend .anim-hoverUnderline;
+    }
+    .active {
+        color: $secondary !important;
+    }
 }

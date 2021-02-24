@@ -1,0 +1,20 @@
+// utils
+.heading {
+    @extend .h1, .text-center;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        text-align: center;
+        width: 40px;
+        height: 2px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $primary;
+    }
+}
+.no-decoration {
+    @extend .text-decoration-none, .text-reset;
+}

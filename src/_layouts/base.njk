@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}">
     <head>
-
         {# Meta Info #}
         {% block meta %}
             {% include "shared/meta.njk" %}
@@ -19,7 +18,7 @@
 
     </head>
     <body>
-
+        <div hidden>{% iconsprite %}</div>
         {# Header #}
         {% block header %}
             {% include "shared/navbar.njk" %}

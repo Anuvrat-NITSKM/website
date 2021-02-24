@@ -1,0 +1,30 @@
+// Updown Animation
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.anim-hoverUnderline {
+    &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        background: $secondary;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    &:hover:after {
+        width: 40%;
+        left: 0;
+    }
+}

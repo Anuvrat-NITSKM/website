@@ -1,8 +1,8 @@
 const MarkdownIt = require("markdown-it");
 
 module.exports = {
-    icon: function (name) {
-        return `<svg class="icon icon--${name}" role="img" aria-hidden="true" width="24" height="24">
+    icon: function (name, size) {
+        return `<svg class="icon icon--${name}" role="img" aria-hidden="true" width="${size}" height="${size}">
                     <use xlink:href="#icon-${name}"></use>
                 </svg>`
     },

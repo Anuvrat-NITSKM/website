@@ -1,0 +1,48 @@
+// References: https://tympanus.net/Tutorials/3DShadingWithBoxShadows/
+
+.activity-card {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+
+    .inner-activity {
+        width: 300px;
+        height: 400px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform: translateZ(-150px);
+        -moz-transform: translateZ(-150px);
+        transform: translateZ(-150px);
+        -webkit-transition: -webkit-transform 350ms;
+        -moz-transition: -moz-transform 350ms;
+        transition: transform 350ms;
+        &:hover {
+            -webkit-transform: rotateY(-78deg) translateZ(20px);
+            -moz-transform: rotateY(-78deg) translateZ(20px);
+            transform: rotateY(-78deg) translateZ(20px);
+        }
+        .info {
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform: rotateY(90deg) translateZ(150px);
+            -moz-transform: rotateY(90deg) translateZ(150px);
+            transform: rotateY(90deg) translateZ(150px);
+            border: 1px solid #b8b5b5;
+        }
+    }
+}
+
+/*************************************
+Fallback
+**************************************/
+.no-csstransforms3d .inner-activity {
+    .info {
+        position: relative;
+    }
+}
