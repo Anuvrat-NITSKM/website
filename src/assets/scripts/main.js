@@ -11,7 +11,7 @@ document.querySelectorAll(".smoothScroll").forEach(item => {
     item.addEventListener('click', e => {
     e.preventDefault()
     const href = e.currentTarget.getAttribute('href')
-    const offsetTop = document.querySelector(href).offsetTop - 80
+    const offsetTop = document.querySelector(href).offsetTop
     scroll({
       top: offsetTop,
       behavior: 'smooth'
