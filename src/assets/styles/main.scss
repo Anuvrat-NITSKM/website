@@ -9,10 +9,16 @@
 #content > div:not(#home) {
     padding-top: 80px;
 }
+#about,#activities{
+    min-height: 100vh-2.5vh;
+    padding-top:40px;
+    position:relative;
+}
 
 #landing {
+    
     height: 100vh;
-    // background-image: url("/assets/images/landing.jpg");
+    //background-image: url("/assets/images/landing.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -24,13 +30,14 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    .arrow-btn {
-        bottom: 15px;
-        left: 0px;
-        right: 0px;
-        animation: MoveUpDown 2s linear infinite;
-        @extend .text-center, .position-absolute;
-    }
+    
+}
+.arrow-btn {
+    bottom: 20px;
+    left: 0px;
+    right: 0px;
+    animation: MoveUpDown 2s linear infinite;
+    @extend .text-center, .position-absolute;
 }
 
 .navbar-nav .nav-item {
