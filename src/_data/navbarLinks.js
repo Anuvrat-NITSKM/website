@@ -4,6 +4,10 @@ module.exports = [
         url: "/resources/"
     },
     {
+        name: "Projects",
+        url: "/projects/"
+    },
+    {
         name: "Blog",
         url: "/blog/"
     },
@@ -14,9 +18,5 @@ module.exports = [
     {
         name: "Team",
         url: "/team/"
-    },
-    {
-        name: "Contact Us",
-        url: "/contact/"
     }
 ]

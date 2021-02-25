@@ -1,4 +1,5 @@
-import "./_bootstrap.js"
+// import "./_bootstrap.js"
+import "./_pcbAnimation.js"
 
 // TODO: Does not work for nested links
 var pathname = window.location.pathname;
