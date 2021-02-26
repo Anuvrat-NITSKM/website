@@ -1,5 +1,9 @@
 module.exports = [
     {
+        name: "Home",
+        url: "/"
+    },
+    {
         name: "Resources",
         url: "/resources/"
     },

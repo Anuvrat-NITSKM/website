@@ -1,12 +1,23 @@
 // Credits: https://codepen.io/christopherprins/pen/rZZWoj
 .st0 {
     fill: none;
-    stroke: $success;
-    stroke-miterlimit: 10;
+    stroke: $primary;
+    stroke-miterlimit: 100;
+    stroke-dasharray: 10 1;
+    animation: dash 3s infinite reverse;
 }
 .st1 {
     fill: none;
-    stroke: $warning;
+    stroke: $quinary;
     stroke-linecap: round;
     stroke-miterlimit: 10;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 96;
+    }
 }

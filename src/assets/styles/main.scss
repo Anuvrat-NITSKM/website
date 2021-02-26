@@ -4,6 +4,12 @@
 @import "./activitiesHover";
 @import "./pcbAnimation";
 
+
+
+body {
+    @extend .bg-secondary, .text-primary;
+}
+
 #content {
     min-height: 79vh;
 }
@@ -21,25 +27,23 @@
 
 #landing {
     height: 100vh;
-    //background-image: url("/assets/images/landing.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    @extend .position-relative, .border-bottom;
+    @extend .position-relative;
     .container {
-        @extend .m-0, .position-absolute, .text-dark;
+        @extend .m-0, .position-absolute, .text-quaternary;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
 .arrow-btn {
-    bottom: 20px;
+    bottom: 40px;
     left: 0px;
     right: 0px;
     animation: MoveUpDown 2s linear infinite;
     @extend .text-center, .position-absolute;
+    .icon{
+        fill:$quaternary;
+    }
 }
 
 .navbar-nav .nav-item {
@@ -47,6 +51,23 @@
         @extend .anim-hoverUnderline;
     }
     .active {
-        color: $secondary !important;
+        color: $quaternary !important;
+        &:after {
+            content: "";
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            background: $quaternary;
+            width: 100%;
+        }
+        pointer-events: none;
     }
+}
+
+#navbar {
+    @extend .navbar-dark, .bg-tertiary;
+    transition: 0.5s;
 }
