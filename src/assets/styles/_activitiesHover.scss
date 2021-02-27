@@ -26,14 +26,13 @@
             position: absolute;
             width: 300px;
             height: 400px;
-            background-color: #fff;
+            background-image: linear-gradient(to bottom, $tertiary , $quinary);
             -webkit-backface-visibility: hidden;
             -moz-backface-visibility: hidden;
             backface-visibility: hidden;
             -webkit-transform: rotateY(90deg) translateZ(150px);
             -moz-transform: rotateY(90deg) translateZ(150px);
             transform: rotateY(90deg) translateZ(150px);
-            border: 1px solid #b8b5b5;
         }
     }
 }

@@ -1,0 +1,13 @@
+<div class="dropup" id="announcementsBtn">
+    <a type="button" class="dropdown-toggle" id="announcements" data-bs-toggle="dropdown" aria-expanded="false">
+        {% icon "announcement",24%}
+        <span class="badge bg-dark position-absolute">{{announcements.length}}</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="announcements">
+        {% for item in announcements %}
+            <li>
+                <a class="dropdown-item" href="{{item.url or '#'}}">{{item.name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

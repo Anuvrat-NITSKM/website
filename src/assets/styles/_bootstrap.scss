@@ -20,12 +20,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "node_modules/bootstrap/scss/_mixins";
 
-// @import "node_modules/bootstrap/scss/bootstrap";
-// @import "node_modules/bootstrap/scss/bootstrap-utilities";
-
-// @import "node_modules/bootstrap/scss/_functions";
-// @import "node_modules/bootstrap/scss/_variables";
-// @import "node_modules/bootstrap/scss/_mixins";
 @import "node_modules/bootstrap/scss/_utilities";
 
 // // Layout & components

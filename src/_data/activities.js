@@ -6,31 +6,31 @@ module.exports = [
         description: "We do Workshops"
     },
     {
-        name: "Workshop",
+        name: "Projects",
         url: "#",
         image: "/assets/images/landing.jpg",
         description: "We do Workshops"
     },
     {
-        name: "Workshop",
+        name: "Tech Exhibition",
         url: "#",
         image: "/assets/images/landing.jpg",
         description: "We do Workshops"
     },
     {
-        name: "Workshop",
+        name: "Study Resources",
         url: "#",
         image: "/assets/images/landing.jpg",
         description: "We do Workshops"
     },
     {
-        name: "Workshop",
+        name: "Expert Lecture Sessions",
         url: "#",
         image: "/assets/images/landing.jpg",
         description: "We do Workshops"
     },
     {
-        name: "Workshop",
+        name: "Case Studies",
         url: "#",
         image: "/assets/images/landing.jpg",
         description: "We do Workshops"

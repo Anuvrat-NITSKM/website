@@ -1,5 +1,55 @@
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container text-center">
-        <span class="text-muted">Anuvrat &copy; 2021, NIT Sikkim</span>
+<footer id="footer" class="footer mt-auto">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-4 text-center text-md-start">
+                <img src="https://via.placeholder.com/80" class="img-fluid" style="width:80px; height:80px;">
+                <div class="text-white">
+                    <h4 class="mb-4 mt-2 text-theme">Anuvrat</h4>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-white text-center text-md-start   ">
+                <div class="">
+                    <div>
+                        <p class="text-white">
+                            <span class="fa fa-map-marker mx-2"></span> NIT Sikkim, Ravangla, South Sikkim</p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <span class="fa fa-phone mx-2 "></span> +91 **********</p>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="fa fa-envelope mx-2"></span>
+                            <a href="mailto:anuvratece@nitsikkim.ac.in">anuvratece@nitsikkim.ac.in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-white text-center text-md-start">
+                <div>
+                    <span class="fw-bold">Connect With Us:</span>
+                    <div class="mt-2">
+                        <a href="#">
+                            <i class="fa fa-facebook fa-2x text-danger mx-2"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-linkedin fa-2x text-danger mx-2"></i>
+                        </a>
+                        <a href="https://github.com/Anuvrat-NITSKM">
+                            {% icon "github",32%}
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-instagram fa-2x text-danger mx-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center bg-secondary py-2 mt-2">
+        <span class="text-quaternary">Anuvrat &copy; {{build.timestamp.getFullYear()}} , NIT Sikkim</span>
     </div>
 </footer>
