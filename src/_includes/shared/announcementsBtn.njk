@@ -8,6 +8,11 @@
             <li>
                 <a class="dropdown-item" href="{{item.url or '#'}}">{{item.name}}</a>
             </li>
+        {% else %}
+            <li>
+                <div class="dropdown-item">Nothing to Show</div>
+            </li>
+
         {% endfor %}
     </ul>
 </div>

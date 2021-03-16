@@ -2,31 +2,59 @@
 const { Octokit } = require('@octokit/rest')
 const { AssetCache } = require('@11ty/eleventy-cache-assets')
 
+const {ORG_NAME, DEFAULT_BRANCH} = require('./gh.js')
+
 const octokit = new Octokit({
     auth: process.env.GH_PERSONAL_TOKEN
 })
-
 async function getReadme(repoName) {
     const { data } = await octokit.repos.getReadme({
-        owner: process.env.ORG_NAME,
+        owner: ORG_NAME,
         repo: repoName
     })
     return Buffer.from(data.content, 'base64').toString()
 }
 
-module.exports = async function () {
-    let asset = new AssetCache('repoCache')
+
+async function fetchProjectRepos(){
+    let asset = new AssetCache('projectRepoCache')
     if (asset.isCacheValid('30m')) {
         return asset.getCachedValue()
     }
 
-    const { data } = await octokit.repos.listForOrg({
-        org: process.env.ORG_NAME
+    const {data} = await octokit.search.repos({
+        q: 'topic:project+org:'+ORG_NAME
     })
-    for (let repo of data) {
+    const items = data.items
+    for (let repo of items) {
         repo.readme = await getReadme(repo.name)
     }
 
-    await asset.save(data, 'json')
-    return data
+    await asset.save(items, 'json')
+    return items
+}
+
+async function fetchResourceRepos(){
+    let asset = new AssetCache('resourceRepoCache')
+    if (asset.isCacheValid('30m')) {
+        return asset.getCachedValue()
+    }
+
+    const {data} = await octokit.search.repos({
+        q: 'topic:resource+org:'+ORG_NAME
+    })
+    const items = data.items
+    for (let repo of items) {
+        repo.readme = await getReadme(repo.name)
+    }
+
+    await asset.save(items, 'json')
+    return items
+}
+
+
+module.exports = async function () {
+    const projectRepos = await fetchProjectRepos()
+    const resourceRepos = await fetchResourceRepos()
+    return {projectRepos, resourceRepos}
 }

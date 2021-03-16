@@ -1,11 +1,11 @@
-require('dotenv').config()
+require('dotenv-flow').config()
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const markdownIt = require('markdown-it')
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
-const iconsprite = require('./utils/iconsprite.js')
+// const iconsprite = require('./utils/iconsprite.js')
 const pluginDate = require("eleventy-plugin-date");
 
 module.exports = function (config) {
@@ -30,7 +30,7 @@ module.exports = function (config) {
     })
 
     // Icon Sprite
-    config.addNunjucksAsyncShortcode('iconsprite', iconsprite)
+    // config.addNunjucksAsyncShortcode('iconsprite', iconsprite)
 
     // Asset Watch Targets
     config.addWatchTarget('./src/assets')

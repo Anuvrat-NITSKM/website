@@ -1,18 +1,20 @@
 <div id="resources" class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for repo in repos %}
+        {% for repo in repos.resourcesRepos %}
             <div class="col">
-                <a href="{{repo.name | slug}}" class="no-decoration">
-                    <div class="card bg-primary text-secondary shadow-sm">
-                        <div class="card-header">{{repo.name | reformatRepoName}}</div>
-                        {# Image will be replaced with a thumbnail representing the repo #}
-                        <img src="https://images.unsplash.com/photo-1541344822555-97aef3abcd04?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80" class="card-img-top" alt="Some image">
-                        <div class="card-body">
-                            <p class="card-text">{{repo.description}}</p>
+                <a href="{{repo.html_url | url}}" class="no-decoration" target="_blank">
+                    <div class="card h-100 bg-primary text-secondary shadow-sm justify-content-around">
+                        <h5 class="card-header d-flex align-items-center justify-content-center" style="min-height: 70px; top: 50%;">{{repo.name | reformatRepoName}}</h5>
+                        <img src="https://github.com/{{gh.ORG_NAME}}/{{repo.name}}/raw/{{gh.DEFAULT_BRANCH}}/thumbnail.jpg" class="card-img-top thumbnail" style="height: 300px" alt="{{repo.name}}">
+                            <div class="card-footer">
+                                {{repo.description}}
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
+                    </a>
+                </div>
+            {%else %}
+                <div class="h3">Coming Soon...</div>
+            {% endfor %}
+        </div>
     </div>
 </div>

@@ -2,12 +2,12 @@
 @import "./animations";
 @import "./utils";
 @import "./activitiesHover";
-@import "./pcbAnimation";
+// @import "./pcbAnimation";
 
 
 
 body {
-    @extend .bg-secondary, .text-primary;
+    @extend .bg-secondary, .text-quaternary;
 }
 
 #content {
@@ -110,10 +110,15 @@ body {
     }
 }
 
+#resource-item{
+    img{
+        @extend .img-fluid;
+    }
+}
 
 #footer{
     @extend .bg-tertiary;
-    svg{
-        fill: $quaternary;
+    .social-links > *{
+        @extend .no-decoration;
     }
 }
