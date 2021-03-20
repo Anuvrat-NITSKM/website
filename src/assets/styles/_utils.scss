@@ -2,6 +2,7 @@
 .heading {
     @extend .h1, .text-center;
     position: relative;
+    margin-bottom: 1em;
     &:after {
         content: "";
         position: absolute;

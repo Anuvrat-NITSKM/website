@@ -1,47 +1,39 @@
-// References: https://tympanus.net/Tutorials/3DShadingWithBoxShadows/
-
-.activity-card {
-    width: 300px;
-    height: 400px;
-    margin: 20px;
-
-    .inner-activity {
-        width: 300px;
-        height: 400px;
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform: translateZ(-150px);
-        -moz-transform: translateZ(-150px);
-        transform: translateZ(-150px);
-        -webkit-transition: -webkit-transform 350ms;
-        -moz-transition: -moz-transform 350ms;
-        transition: transform 350ms;
-        &:hover {
-            -webkit-transform: rotateY(-78deg) translateZ(20px);
-            -moz-transform: rotateY(-78deg) translateZ(20px);
-            transform: rotateY(-78deg) translateZ(20px);
-        }
-        .info {
-            position: absolute;
-            width: 300px;
-            height: 400px;
-            background-image: linear-gradient(to bottom, $tertiary , $quinary);
-            -webkit-backface-visibility: hidden;
-            -moz-backface-visibility: hidden;
-            backface-visibility: hidden;
-            -webkit-transform: rotateY(90deg) translateZ(150px);
-            -moz-transform: rotateY(90deg) translateZ(150px);
-            transform: rotateY(90deg) translateZ(150px);
-        }
+.card-flip {
+    perspective: 1000px;
+    &:hover .flip,
+    &.hover .flip {
+        transform: rotateY(180deg);
     }
 }
 
-/*************************************
-Fallback
-**************************************/
-.no-csstransforms3d .inner-activity {
-    .info {
-        position: relative;
+.card-flip,
+.front,
+.back {
+    width: 100%;
+    height: 380px;
+}
+
+.flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    .card {
+        background-image: linear-gradient(to bottom, $tertiary, $quinary);
     }
+    transform: rotateY(180deg);
 }

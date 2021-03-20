@@ -1,22 +1,33 @@
 <div id="activities">
     <div class="container">
         <div class="heading">Activities</div>
-        <div class="row">
-            <div class="row justify-content-around">
+        <div class="row justify-content-around">
                 {% for activity in activities %}
-                    <div class="activity-card col col-12 col-md-6 col-lg-4" >
-                        <div class="inner-activity" style="background-image: url({{activity.image}})">
-                            <div class="info">
-                                <h1>{{activity.name}}</h1>
-                                <p>{{activity.description}}</p>
-                            </div>
-                        </div>
-                    </div>
+ 				<div class="my-3 col col-12 col-md-6 col-lg-4">
+                 <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							{# <!-- front content --> #}
+							<div class="card h-100" style="background-image: url({{activity.image}})">
+							</div>
+						</div>
+						<div class="back">
+							{# <!-- back content --> #}
+							<div class="card h-100">
+							  <div class="card-body py-2 px-3">
+							    <h4 class="card-title text-primary">{{activity.name}}</h4>
+							    <h6 class="card-text text-quaternary">{{activity.description | safe}}</h6>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+                </div>
                 {% endfor %}
-            </div>
+
         </div>
-        {# <div class="py-3 text-center">
-        Know More About Our Activities In Our <a href="/blog">Blog</a>
-        </div> #}
+        <div class="mt-5 text-center lead fw-normal">
+        Know More About Our Upcoming Events And Activities From Our <a href="{{meta.linkedin}}" target="_blank">LinkedIn</a> Page
+        </div>
     </div>
 </div>
