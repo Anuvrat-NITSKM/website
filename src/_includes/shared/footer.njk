@@ -2,58 +2,41 @@
     <div class="container">
         <div class="row pt-5">
             <div class="col-md-4 text-center text-md-start">
-                <img src="https://via.placeholder.com/80" class="img-fluid" style="width:80px; height:80px;">
+                <img src="/assets/images/logo.png" class="img-fluid" style="width:80px; height:80px;">
                 <div class="text-white">
-                    <h4 class="mb-4 mt-2 text-theme">Anuvrat</h4>
+                    <h4 class="mb-4 mt-2">Anuvrat</h4>
                 </div>
             </div>
 
             <div class="col-md-4 text-white text-center text-md-start">
-                <div class="">
-                    <div>
-                        <p class="text-white">
-                            <span class="fa fa-map-marker mx-2"></span> NIT Sikkim, Ravangla, South Sikkim</p>
-                    </div>
-
-                    <div>
-                        <p>
-                            <span class="fa fa-phone mx-2 "></span> +91 **********</p>
-                    </div>
-                    <div>
-                        <p>
-                            <span class="fa fa-envelope mx-2"></span>
-                            <a href="mailto:anuvratece@nitsikkim.ac.in">anuvratece@nitsikkim.ac.in</a>
-                        </p>
-                    </div>
-                </div>
+                <ul class="fa-ul">
+                    <li><p><i class="fa-li fa fa-map-marker"></i>{{meta.address}}</p></li>
+                    <li><p><i class="fa-li fa fa-envelope"></i><a href="{{'mailto:'+meta.email}}">{{meta.email}}</a></p></li>
+                </ul>
             </div>
 
             <div class="col-md-4 text-white text-center text-md-start">
                 <div>
-                    <span class="fw-bold">Connect With Us:</span>
+                    <span class="fw-bold">Socialize With Us:</span>
                     <div class="my-2 social-links">
-                        <a href="#">
-                            <i class="fa fa-facebook fa-2x mx-2"></i>
-                        </a>
-                        <a href="#">
+                        <a href="{{meta.linkedin}}" target="_blank">
                             <i class="fa fa-linkedin fa-2x mx-2"></i>
                         </a>
-                        <a href="https://github.com/Anuvrat-NITSKM">
-                            <i class="fa fa-github fa-2x mx-2"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-instagram fa-2x mx-2"></i>
-                        </a>
-                        <a href="#">
+                        <a href="{{meta.youtube}}" target="_blank">
                             <i class="fa fa-youtube fa-2x mx-2"></i>
                         </a>
-
+                        <a href="{{meta.github}}" target="_blank">
+                            <i class="fa fa-github fa-2x mx-2"></i>
+                        </a>
+                        <a href="{{meta.facebook}}" target="_blank">
+                            <i class="fa fa-facebook fa-2x mx-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-center bg-secondary py-2 mt-2">
-        <span class="text-quaternary">Anuvrat &copy; {{build.timestamp.getFullYear()}} , NIT Sikkim</span>
+        <span class="text-quaternary">Anuvrat &copy; {{build.timestamp.getFullYear()}} , <a href="https://nitsikkim.ac.in" target="_blank">NIT Sikkim</a></span>
     </div>
 </footer>

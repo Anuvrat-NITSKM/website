@@ -17,6 +17,7 @@ $custom-colors: (
     "quinary": $quinary
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
+$enable-rounded: false;
 
 @import "node_modules/bootstrap/scss/_mixins";
 

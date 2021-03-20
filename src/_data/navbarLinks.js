@@ -12,10 +12,6 @@ module.exports = [
         url: "/projects/"
     },
     {
-        name: "Blog",
-        url: "/blog/"
-    },
-    {
         name: "Gallery",
         url: "/gallery/"
     },

@@ -6,11 +6,11 @@
     <ul class="dropdown-menu" aria-labelledby="announcements">
         {% for item in announcements %}
             <li>
-                <a class="dropdown-item" href="{{item.url or '#'}}">{{item.name}}</a>
+                <a class="dropdown-item" href="{{item.url or '#'}}" target="_blank">{{item.name}}</a>
             </li>
         {% else %}
             <li>
-                <div class="dropdown-item">Nothing to Show</div>
+                <div class="dropdown-item">No New Events For Now</div>
             </li>
 
         {% endfor %}
