@@ -1,10 +1,7 @@
 @import "./bootstrap";
 @import "./animations";
 @import "./utils";
-@import "./activitiesHover";
 // @import "./pcbAnimation";
-
-
 
 body {
     @extend .bg-secondary, .text-quaternary;
@@ -49,13 +46,7 @@ body {
 
 #landing {
     height: 100vh;
-    @extend .position-relative, .bg-tertiary;
-    .container {
-        @extend .m-0, .position-absolute, .text-quaternary;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    @extend .position-relative, .bg-tertiary, .text-quaternary;
 }
 .arrow-btn {
     bottom: 40px;
@@ -63,16 +54,16 @@ body {
     right: 0px;
     animation: MoveUpDown 2s linear infinite;
     @extend .text-center, .position-absolute;
-    .icon{
+    .icon {
         fill: $quaternary;
     }
 }
 
-#home > *{
-    &:nth-child(even){
+#home > * {
+    &:nth-child(even) {
         background-color: shade-color($secondary, 20%);
     }
-    &:nth-child(odd){
+    &:nth-child(odd) {
         background-color: shade-color($secondary, 10%);
     }
 }
@@ -82,43 +73,53 @@ body {
     transition: 0.5s;
 }
 
-
-#announcementsBtn{
+#announcementsBtn {
     @extend .position-sticky, .d-inline-block, .mb-4;
     bottom: 20px;
+
+    border-radius: 50%;
     left: 20px;
-    .badge{
+    .badge {
         top: 0;
         right: 0;
     }
     &:hover .dropdown-menu {
         display: block;
         margin-top: 0; // remove the gap so it doesn't close
-     }
-    .dropdown-toggle{
-        &:after{
+    }
+    .dropdown-toggle {
+        &:after {
             display: none;
         }
-        &:hover, &.show{
-           @extend .bg-quaternary;
-           svg{
-               fill: $primary;
-           }
+        &:hover,
+        &.show {
+            @extend .bg-quaternary;
+            svg {
+                fill: $primary;
+            }
         }
         transition: 0.2s;
-        @extend  .p-4, .rounded-circle, .bg-primary, .text-quaternary;
+        @extend .p-4, .rounded-circle, .bg-primary, .text-quaternary;
     }
 }
 
-#resource-item{
-    img{
+.activity-image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#resource-item {
+    img {
         @extend .img-fluid;
     }
 }
 
-#footer{
+#footer {
     @extend .bg-tertiary;
-    .social-links > *{
+    .social-links > * {
         @extend .no-decoration;
     }
 }

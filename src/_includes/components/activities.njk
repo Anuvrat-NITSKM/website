@@ -1,33 +1,25 @@
 <div id="activities">
-    <div class="container">
-        <div class="heading">Activities</div>
-        <div class="row justify-content-around">
-                {% for activity in activities %}
- 				<div class="my-3 col col-12 col-md-6 col-lg-4">
-                 <div class="card-flip">
-					<div class="flip">
-						<div class="front">
-							{# <!-- front content --> #}
-							<div class="card h-100" style="background-image: url({{activity.image}})">
-							</div>
-						</div>
-						<div class="back">
-							{# <!-- back content --> #}
-							<div class="card h-100">
-							  <div class="card-body py-2 px-3">
-							    <h4 class="card-title text-primary">{{activity.name}}</h4>
-							    <h6 class="card-text text-quaternary">{{activity.description | safe}}</h6>
-							  </div>
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="container" class="mb-5">
+    <div class="heading">Activities</div>
+    <div class="row justify-content-around">
+        {% for activity in activities %}
+            <div class="row p-0 my-2 border border-primary" style="min-height: 350px">
+                <div class="p-3 col-md-12 col-lg-6 {{ 'order-lg-1 order-2' if loop.index%2 else 'order-lg-2 order-1' }}">
+                    <div>
+                        <h3>{{ activity.name }}</h3>
+                        <div class="lead">
+                            {{ activity.description | safe }}</div>
+                    </div>
                 </div>
-                {% endfor %}
-
+                <div class="p-0 col-md-12 col-lg-6 {{ 'order-lg-2 order-1' if loop.index%2 }}">
+                    <img src="{{ activity.image }}" class="img-fluid activity-image"></div>
+                </div>
+            {% endfor %}
         </div>
-        <div class="mt-5 text-center lead fw-normal">
-        Know More About Our Upcoming Events And Activities From Our <a href="{{meta.linkedin}}" target="_blank">LinkedIn</a> Page
-        </div>
+        {# <div class="mt-5 text-center lead fw-normal">
+            Know More About Our Upcoming Events And Activities From Our
+            <a href="{{ meta.linkedin }}" target="_blank">LinkedIn</a>
+            Page
+        </div> #}
     </div>
 </div>
