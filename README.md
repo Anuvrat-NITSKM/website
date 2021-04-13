@@ -24,6 +24,13 @@ Note: Whenever starting a new work always create a new branch from `main` branch
 - Execute `git pull`
 - Execute `git checkout -b <your-branch-name>`
 
+## Documentations
+https://mozilla.github.io/nunjucks/
+https://www.11ty.dev/docs/
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+https://sass-lang.com/documentation
+
+(HTML CSS JS) https://developer.mozilla.org/en-US/docs/Web/Reference
 
 ## Getting Started
 To install the necessary packages, run this command in the root folder of the site:
