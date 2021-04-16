@@ -4,6 +4,10 @@ module.exports = [
         url: "/"
     },
     {
+        name: "Events",
+        url: "/events/"
+    },
+    {
         name: "Resources",
         url: "/resources/"
     },
