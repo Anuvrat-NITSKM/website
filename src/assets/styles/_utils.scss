@@ -19,3 +19,7 @@
 .no-decoration {
     @extend .text-decoration-none, .text-reset;
 }
+
+.pre-text{
+    white-space: pre-wrap;
+}

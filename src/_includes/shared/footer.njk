@@ -3,17 +3,25 @@
         <div class="row pt-5">
             <div class="col-md-4 text-center text-md-start mb-4">
                 <div>
-                <img src="/assets/images/logo.png" class="img-fluid" style="width:100px; height:100px;">
-                <div class="text-white">
-                    <h4 class="mb-4 mt-2">Anuvrat</h4>
-                </div>
+                    <img src="/assets/images/logo.png" class="img-fluid" style="width:100px; height:100px;">
+                    <div class="text-white">
+                        <h4 class="mb-4 mt-2">Anuvrat</h4>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-4 text-white text-md-start justify-content-center d-flex mb-4">
                 <ul class="fa-ul">
-                    <li><p><i class="fa-li fa fa-map-marker"></i>{{meta.address}}</p></li>
-                    <li><p><i class="fa-li fa fa-envelope"></i><a href="{{'mailto:'+meta.email}}">{{meta.email}}</a></p></li>
+                    <li>
+                        <p>
+                            <i class="fa-li fa fa-map-marker"></i>{{meta.address}}</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fa-li fa fa-envelope"></i>
+                            <a href="{{'mailto:'+meta.email}}">{{meta.email}}</a>
+                        </p>
+                    </li>
                 </ul>
             </div>
 
@@ -39,6 +47,7 @@
         </div>
     </div>
     <div class="text-center bg-secondary py-2 mt-2">
-        <span class="text-quaternary">Anuvrat &copy; {{build.timestamp.getFullYear()}} , <a href="https://nitsikkim.ac.in" target="_blank">NIT Sikkim</a></span>
+        <span class="text-quaternary">Anuvrat &copy; {{build.timestamp.getFullYear()}}, <a href="https://nitsikkim.ac.in" target="_blank">NIT Sikkim</a>
+        </span>
     </div>
 </footer>

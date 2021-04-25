@@ -6,9 +6,11 @@ const { AssetCache } = require('@11ty/eleventy-cache-assets')
 
 function basicMap(obj){
     return {
+        id: obj.id,
         name: obj.snippet.title,
         description: obj.snippet.description,
-        thumbnail: (obj.snippet.thumbnails.default && obj.snippet.thumbnails.default.url) || undefined
+        thumbnail: (obj.snippet.thumbnails.default && obj.snippet.thumbnails.default.url) || undefined,
+        link: `https://youtube.com/playlist?list=${obj.id}`
     }
 }
 
@@ -27,11 +29,11 @@ async function getPlaylist(){
     const {data} = await axios.get(`https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=${CHANNEL_ID}&key=${process.env.YOUTUBE_API_KEY}`)
     let ret = []
     for(let i=0;i<data.items.length;i++){
-        const plItems = await getPlaylistItems(data.items[i].id)
-        console.log(plItems.items[0].snippet)
+        // const plItems = await getPlaylistItems(data.items[i].id)
+        // console.log(plItems.items[0].snippet)
         ret.push({
             ...basicMap(data.items[i]),
-            playlist: plItems.items.map((item) => basicMap(item))
+            // playlist: plItems.items.map((item) => basicMap(item))
         })
     }
     await asset.save(ret, 'json')

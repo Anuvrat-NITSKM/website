@@ -4,41 +4,23 @@ title: Events - Anuvrat, NIT Sikkim
 
 <div id="events">
     <div id="events" class="container">
-        <div class="accordion accordion-flush" id="accordionflush">
-            {% for event in events %}
-                <div class="accordion-item">
-                    <div class="accordion-header h2" id="flush-heading-{{loop.index}}">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{loop.index}}" aria-expanded="false" aria-controls="flush-collapse-{{loop.index}}">
-                            <img src="{{event.thumbnail}}"/>
-                            {{event.name}}
-                            {{event.description}}
-                        </button>
-                    </div>
-
-                    <div id="flush-collapse-{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="flush-heading-{{ loop.index }}" data-bs-parent="#accordionflush">
-                        <div class="accordion-body">
-                            {% for playlist in event.playlist %}
-                                <div class="card mb-3">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="{{playlist.thumbnail}}" alt="{{playlist.name}}">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title">{{playlist.name}}</h5>
-                                                <p class="card-text">{{playlist.description}}</p>
-                                                {# <p class="card-text">
-                                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                                </p> #}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
+        {% for event in events %}
+            <a class="w-100 mt-3 mb-1 no-decoration" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapse-{{loop.index}}">
+                <div class="row p-0 mt-2" style="min-height: 150px">
+                    <div class="col-md-12 col-lg-3 text-center"><img src="{{event.thumbnail}}" class="img-thumbnail" style="min-height: 140px"/></div>
+                    <div class="h5 py-3 col-md-12 col-lg-9 justify-items-center">
+                        {{ event.name }}
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+            </a>
+            <div class="collapse" id="collapse-{{loop.index}}">
+                <div class="border border-primary py-2 px-1">
+                    {{event.description}}
+                    <div class="p-2 clearfix">
+                        <a href="{{event.link}}" rel="noopener" class="btn btn-outline-primary float-end">See More</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </div>
