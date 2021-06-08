@@ -1,25 +1,161 @@
+<style>
+  
+
+  .contained {
+    /* background-color: blue; */
+    width: 25vw;
+    height: 70vh;
+    margin: 50px;
+
+  }
+
+  .image {
+    border: 2px solid white;
+    background-position: center;
+    background-size: cover;
+    height: 80%;
+    width: 100%;
+  }
+
+  .intro {
+    width: 90%;
+     border: 2px solid black;
+    margin: 0 auto 50px;
+    background-color: rgb(255,255,255);
+    position: relative;
+    bottom: 0px;
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .dash {
+    text-align: center;
+    width: 70px;
+    height: 1.5px;
+    margin: 5px;
+    background-color: rgb(0, 150, 250);
+  }
+
+  .social {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(99, 99, 99);
+  }
+
+  .social_link img {
+    width: 25px;
+    height: 25px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    color: #000000;
+  }
+
+  span {
+    font-size: 15px;
+  }
+  .headline{
+   
+    margin:auto;
+    font-size:40px;
+    font-weight: 600;
+  }
+</style>
+
+{% macro Card(photo, Name, role, fb, ig, linkedin) %}
+    <div class="contained mx-auto px-auto">
+        <div class="image"><img src="{{photo}}" alt="" style="width:100%"></div>
+        <div class="intro">
+            <h2 style=color:"black">{{Name}}</h2>
+            <div class="dash"></div>
+            <div class="social">
+                <span>{{role}}</span>
+                <div class="social_link">
+                    {% if fb %}
+                     <a href="{{fb}}" target="_blank">
+                        <i class="fa fa-facebook fa-2x mx-2"></i>
+                    </a>
+                    {% endif %}
+                    {% if ig %}
+                      <a href="{{ig}}" target="_blank">
+                        <i class="fa fa-instagram fa-2x mx-2"></i>
+                    </a>
+                    {% endif %}
+                    {% if linkedin %}
+                      <a href="{{linkedin}}" target="_blank">
+                        <i class="fa fa-linkedin fa-2x mx-2"></i>
+                    </a>
+                    {% endif %}                                                         
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
 <div id="teams">
-<div class="container" class="mb-5">
-    <div class="heading">Our Team</div>
-    <div class="row justify-content-around">
-        {% for team in teams %}
-            <div class="row p-0 my-2 border border-primary" style="min-height: 350px">
-                <div class="p-3 col-md-12 col-lg-6 {{ 'order-lg-1 order-2' if loop.index%2 else 'order-lg-2 order-1' }}">
-                    <div>
-                        <h3>{{ team.name }}</h3>
-                        <div class="lead">
-                            {{ team.description | safe }}</div>
-                    </div>
-                </div>
-                <div class="p-0 col-md-12 col-lg-6 {{ 'order-lg-2 order-1' if loop.index%2 }}">
-                    <img src="{{ team.image }}" class="img-fluid team-image"></div>
-                </div>
+
+     
+    <div class="container" class="mb-5">
+        <div class="heading">Meet Our Team</div>
+        <div class="row justify-content-around">
+            {% for team in teams.advisories %}
+
+                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin) }}
+
             {% endfor %}
         </div>
-        {# <div class="mt-5 text-center lead fw-normal">
-            Know More About Our Upcoming Events And Activities From Our
-            <a href="{{ meta.linkedin }}" target="_blank">LinkedIn</a>
-            Page
-        </div> #}
+
     </div>
+
+
+ 
+    <div class="container" class="mb-5">
+        <!-- <div class="heading">Meet Our Team</div> -->
+        <div class="row justify-content-around">
+            {% for team in teams.head %}
+
+                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin) }}
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class="container" class="mb-5">
+        <!-- <div class="heading">Our Coordinators</div> -->
+        <div class="row justify-content-around">
+            {% for team in teams.coordinators %}
+
+                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin) }}
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <!-- {# <div class="container" class="mb-5">
+        <div class="heading">Our Volunteers</div>
+        <div class="row justify-content-around">
+            {% for team in teams.volunteers %}
+
+                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin) }}
+
+            {% endfor %}
+        </div>
+
+    </div> #} -->
+
+    <!-- <div class="container" class="mb-5">
+        <div class="heading">Advisory Committee</div>
+        <div class="row justify-content-around">
+            {% for team in teams.advisories %}
+
+                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin) }}
+
+            {% endfor %}
+        </div>
+
+    </div> -->
+
 </div>
