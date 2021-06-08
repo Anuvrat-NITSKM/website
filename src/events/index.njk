@@ -4,7 +4,7 @@ title: Events - Anuvrat, NIT Sikkim
 
 <div id="events">
     <div id="events" class="container">
-        {% for event in events %}
+        {% for event in events | reverse %}
             <a class="w-100 mt-3 mb-1 no-decoration" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapse-{{loop.index}}">
                 <div class="row p-0 mt-2" style="min-height: 150px">
                     <div class="col-md-12 col-lg-3 text-center"><img src="{{event.thumbnail}}" class="img-thumbnail w-100 h-100" style="min-height: 140px"/></div>
@@ -17,7 +17,7 @@ title: Events - Anuvrat, NIT Sikkim
                 <div class="border border-primary py-2 px-1">
                     {{event.description | nl2br | safe}}
                     <div class="p-2 clearfix">
-                        <a href="{{event.link}}" rel="noopener" class="btn btn-outline-primary float-end">See More</a>
+                        <a href="{{event.link}}" target="_blank" class="btn btn-outline-primary float-end">See More</a>
                     </div>
                 </div>
             </div>

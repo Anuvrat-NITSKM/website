@@ -6,7 +6,7 @@ document.querySelector(`.navbar-nav li a[href="${pathname}"]`)?.classList?.add('
 
 
 // Scroll Smooth
-document.querySelectorAll(".smoothScroll").forEach(item => {
+document.querySelectorAll(".smoothscroll").forEach(item => {
     item.addEventListener('click', e => {
     e.preventDefault()
     const href = e.currentTarget.getAttribute('href')

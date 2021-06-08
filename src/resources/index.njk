@@ -3,23 +3,55 @@ title: Resources - Anuvrat, NIT Sikkim
 ---
 {# Add appropriate description#}
 
+<style>
+    .item .box {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 280px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .item .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(31, 148, 255, 0.75);
+        transition: opacity 0.15s ease-in;
+        opacity: 0;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    .item:hover .cover {
+        opacity: 0.8;
+    }
+</style>
+
 <div id="resources" class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for repo in repos.resourcesRepos %}
+        {% for repo in repos.resourceRepos %}
             <div class="col">
                 <a href="{{repo.html_url | url}}" class="no-decoration" target="_blank">
-                    <div class="card h-100 bg-primary text-secondary shadow-sm justify-content-around">
-                        <h5 class="card-header d-flex align-items-center justify-content-center" style="min-height: 70px; top: 50%;">{{repo.name | reformatRepoName}}</h5>
-                        <img src="https://github.com/{{gh.ORG_NAME}}/{{repo.name}}/raw/{{gh.DEFAULT_BRANCH}}/thumbnail.jpg" class="card-img-top thumbnail" style="height: 300px" alt="{{repo.name}}">
-                            <div class="card-footer">
-                                {{repo.description}}
+
+                    <div class="card h-100 item bg-primary text-secondary shadow-sm justify-content-around">
+                        <div class="box" style="background-image:url(https://github.com/{{gh.org_name}}/{{repo.name}}/raw/{{gh.default_branch}}/thumbnail.jpg)">
+                            <div class="cover d-flex align-items-center justify-content-center">
+                                <div>{{repo.description}}</div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            {%else %}
-                <div class="h3">Coming Soon...</div>
-            {% endfor %}
-        </div>
+                        <div class="card-footer">
+                            <div class="text-center h5 d-flex align-items-center justify-content-center" style="min-height: 50px;">{{repo.name | reformatRepoName}}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {%else %}
+            <div class="h3">Coming Soon...</div>
+        {% endfor %}
     </div>
 </div>

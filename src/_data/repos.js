@@ -41,7 +41,7 @@ async function fetchResourceRepos(){
     }
 
     const {data} = await octokit.search.repos({
-        q: 'topic:resource+org:'+ORG_NAME
+        q: 'topic:resources+org:'+ORG_NAME
     })
     const items = data.items
     for (let repo of items) {
