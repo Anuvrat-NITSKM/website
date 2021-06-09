@@ -1,26 +1,25 @@
 <style>
 
-  .intro {
-    width: 90%;
-    border: 2px solid black;
-    margin: 0 auto 50px;
-    background-color: rgb(255,255,255);
-    position: relative;
-    bottom: 15px;
-    padding: 15px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .dash {
-    width: 70px;
-    height: 1.5px;
-    margin: 5px;
-    background-color: rgb(0, 150, 250);
-  }
-
+    .intro {
+        width: 90%;
+        border: 2px solid black;
+        margin: 0 auto 50px;
+        background-color: rgb(255,255,255);
+        position: relative;
+        bottom: 15px;
+        padding: 15px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .dash {
+        width: 70px;
+        height: 1.5px;
+        margin: 5px;
+        background-color: rgb(0, 150, 250);
+    }
 </style>
 
-{% macro Card(photo, Name, role, fb, ig, linkedin, email) %}
-    <div class="col-12 col-md-6 col-lg-4">
+{% macro Card(photo, Name, role, fb, ig,linkedin, email) %}
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="mx-auto px-auto">
             <div class="img-fluid border border-2"><img src="{{photo}}" alt="" style="width:100%"></div>
             <div class="intro">
@@ -30,24 +29,24 @@
                     <span>{{role}}</span>
                     <div class="social-links no-decoration">
                         {% if email %}
-                        <a href="mailto:{{email}}" target="_blank" class="no-decoration mx-1">
-                            <i class="fa fa-envelope"></i>
-                        </a>
+                            <a href="mailto:{{email}}" target="_blank" class="no-decoration mx-1">
+                                <i class="fa fa-envelope"></i>
+                            </a>
                         {% endif %}
                         {% if fb %}
-                        <a href="{{fb}}" target="_blank" class="no-decoration mx-1">
-                            <i class="fa fa-facebook"></i>
-                        </a>
+                            <a href="{{fb}}" target="_blank" class="no-decoration mx-1">
+                                <i class="fa fa-facebook"></i>
+                            </a>
                         {% endif %}
                         {% if ig %}
-                        <a href="{{ig}}" target="_blank" class="no-decoration mx-1">
-                            <i class="fa fa-instagram"></i>
-                        </a>
+                            <a href="{{ig}}" target="_blank" class="no-decoration mx-1">
+                                <i class="fa fa-instagram"></i>
+                            </a>
                         {% endif %}
                         {% if linkedin %}
-                        <a href="{{linkedin}}" target="_blank" class="no-decoration mx-1">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
+                            <a href="{{linkedin}}" target="_blank" class="no-decoration mx-1">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
                         {% endif %}
                     </div>
                 </div>
@@ -71,7 +70,6 @@
         </div>
     </div>
 
-
     <div class="container mb-5">
         {# <div class="heading">Meet Our Team</div> #}
         <div class="row justify-content-around">
@@ -85,7 +83,7 @@
     </div>
 
     <div class="container mb-5">
-       {# <div class="heading">Our Coordinators</div> #}
+        {# <div class="heading">Our Coordinators</div> #}
         <div class="row justify-content-around">
             {% for team in teams.coordinators %}
 
