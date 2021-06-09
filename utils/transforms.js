@@ -15,7 +15,9 @@ module.exports = {
             return htmlmin.minify(content, {
                 useShortDoctype: true,
                 removeComments: true,
-                collapseWhitespace: true
+                collapseWhitespace: true,
+                minifyCSS: true,
+                minifyJS: true
             })
         }
         return content

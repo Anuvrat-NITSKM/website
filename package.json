@@ -24,7 +24,6 @@
         "@babel/core": "^7.11.4",
         "@babel/plugin-transform-runtime": "^7.11.0",
         "@babel/preset-env": "^7.11.0",
-        "@octokit/graphql": "^4.6.0",
         "@octokit/rest": "^18.2.0",
         "@popperjs/core": "^2.8.2",
         "axios": "^0.21.1",
