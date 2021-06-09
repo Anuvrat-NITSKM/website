@@ -9,7 +9,7 @@ function basicMap(obj){
         id: obj.id,
         name: obj.snippet.title,
         description: obj.snippet.description,
-        thumbnail: (obj.snippet.thumbnails.default && obj.snippet.thumbnails.default.url) || undefined,
+        thumbnail: (obj.snippet.thumbnails.standard && obj.snippet.thumbnails.standard.url) || undefined,
         link: `https://youtube.com/playlist?list=${obj.id}`
     }
 }
