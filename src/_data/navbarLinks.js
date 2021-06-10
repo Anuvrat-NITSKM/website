@@ -1,3 +1,7 @@
+const announcements = require('./announcements');
+
+const eventAnnouncements = announcements.filter((d) => d.type && d.type === 'EVENT')
+
 module.exports = [
     {
         name: "Home",
@@ -5,7 +9,8 @@ module.exports = [
     },
     {
         name: "Events",
-        url: "/events/"
+        url: "/events/",
+        notifications: eventAnnouncements
     },
     {
         name: "Resources",

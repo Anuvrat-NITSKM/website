@@ -14,5 +14,9 @@ module.exports = {
 
     stringify: function(str){
         return JSON.stringify(str)
+    },
+
+    where: function(arr, key, value){
+        return arr.filter((d) => d[key] === value)
     }
 }

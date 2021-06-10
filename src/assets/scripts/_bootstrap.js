@@ -4,12 +4,12 @@ import {
     // Carousel,
     Collapse,
     // Dropdown,
-    // Modal,
+    Modal,
     // Popover, // Needs manual initialization, code below
     // Scrollspy,
     // Tab,
     // Toast,
-    Tooltip // Needs manual initialization, code below
+    // Tooltip // Needs manual initialization, code below
   } from "bootstrap"
 
   // Popovers initialization

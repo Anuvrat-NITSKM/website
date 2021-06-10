@@ -8,10 +8,22 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 {% for item in navbarLinks %}
                     <li class="nav-item position-relative">
-                        <a class="nav-link" href="{{item.url}}">{{item.name}}</a>
+                        <a class="nav-link" href="{{item.url}}">{{item.name}}
+                            {% if item.notifications %}
+                                <span class="nav-notifier badge rounded-pill bg-dark text-glow">{{item.notifications}}</span>
+                            {% endif %}
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
 </nav>
+
+{# <style>
+.nav-notifier{
+    position: absolute;
+    top: 0px;
+    right: -5px;
+}
+</style> #}

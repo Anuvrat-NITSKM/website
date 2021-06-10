@@ -2,25 +2,42 @@
 title: Events - Anuvrat, NIT Sikkim
 ---
 
-<div id="events">
-    <div id="events" class="container">
-        {% for event in events | reverse %}
-            <a class="w-100 mt-3 mb-1 no-decoration" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{loop.index}}" aria-expanded="false" aria-controls="collapse-{{loop.index}}">
-                <div class="row p-0 mt-2" style="min-height: 150px">
-                    <div class="col-md-12 col-lg-3 text-center"><img src="{{event.thumbnail}}" class="img-thumbnail w-100 h-100" style="min-height: 140px"/></div>
-                    <div class="display-6 py-3 col-md-12 col-lg-9 justify-items-center">
-                        {{ event.name }}
-                    </div>
-                </div>
-            </a>
-            <div class="collapse" id="collapse-{{loop.index}}">
-                <div class="border border-primary py-2 px-1">
-                    {{event.description | nl2br | safe}}
-                    <div class="p-2 clearfix">
-                        <a href="{{event.link}}" target="_blank" class="btn btn-outline-primary float-end">See More</a>
-                    </div>
-                </div>
+
+{% macro Accordion(event, loop) %}
+    <a class="w-100 mt-3 mb-1 no-decoration" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{event.name |  replace(" ", "-")}}" aria-expanded="false" aria-controls="collapse-{{event.name |  replace(" ", "-")}}">
+        <div class="row p-0 mt-2" style="min-height: 150px">
+            <div class="col-md-12 col-lg-3 text-center"><img src="{{event.thumbnail}}" class="img-thumbnail w-100 h-100" style="min-height: 140px"/></div>
+            <div class="display-6 fw-normal py-3 col-md-12 col-lg-9 justify-items-center">
+                {{ event.name }}
             </div>
+        </div>
+    </a>
+    <div class="collapse" id="collapse-{{event.name |  replace(" ", "-")}}">
+        <div class="border border-primary py-2 px-1">
+            {{event.description | nl2br | safe}}
+            <div class="p-2 clearfix">
+                {% if event.link %}
+                    <a href="{{event.link}}" target="_blank" class="btn btn-outline-primary float-end">See More</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+
+<div id="events" class="container">
+    <div class="mb-5">
+        <div class="heading">Upcoming Events</div>
+        {% for event in announcements | where('type', 'EVENT') %}
+            {{  Accordion(event, loop) }}
+        {% else %}
+            <div class="h4 mb-5">Sorry No Upcoming Events For Now</div>
+        {% endfor %}
+    </div>
+    <div class="mb-5">
+        <div class="heading">Past Events</div>
+        {% for event in events | sort(true, true, 'date') %}
+            {{  Accordion(event, loop) }}
         {% endfor %}
     </div>
 </div>

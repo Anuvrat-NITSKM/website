@@ -1,5 +1,48 @@
-<div id="gallery">
-    <div class="display-4 container">
-        Coming Soon...
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<div id="gallery" class="container mb-4">
+    <div class="heading">Gallery</div>
+    <div class="grid mx-auto" data-masonry='{ "itemSelector": ".grid-item", "isFitWidth": true}'>
+        {% for image in gallery %}
+            <a href="#imageModal" role="button" data-bs-toggle="modal" class="grid-item no-decoration" onclick="changeModalImage(event)">
+                <img class="img-fluid" src="/assets/images/gallery/{{image}}" />
+            </a>
+        {% endfor %}
     </div>
 </div>
+
+<div class="modal" tabindex="-1" data-bs-backdrop="static" id="imageModal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content p-0 m-0">
+        <div class="modal-body p-0 m-0 postition-relative">
+            <button type="button" class="btn-close btn-close-white modal-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img id="modal-image" src="" class="w-100 h-100"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+#gallery{
+    position: relative;
+}
+.grid-item {
+  margin: 8px;
+  border: solid var(--bs-primary) thin
+}
+.grid-item img{
+  max-width: 20vw;
+}
+.modal-close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+</style>
+
+<script>
+function changeModalImage(e){
+    document.getElementById('modal-image').src = e.target.src;
+    e.preventDefault();
+}
+</script>
