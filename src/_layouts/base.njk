@@ -10,40 +10,37 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
             {% if build.isDev %}
                 <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
-                {% else %}
-                    {# CDN imports here for production #}
-                    <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
-                {% endif %}
+            {% else %}
+                {# CDN imports here for production if possible #}
+                <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+            {% endif %}
         {% endblock %}
-            </head>
-            <body>
-                {# <div hidden>{% iconsprite %}</div> #}
-                {% include "shared/svgSprites.njk"%}
-                {# Header #}
-                {% block header %}
-                    {% include "shared/navbar.njk" %}
-                {% endblock %}
-                {# Content #}
-                {% block content %}
-                    <main id="content">
-                        {{ content | safe }}
-                    </main>
-                {% endblock %}
-                {% include "shared/announcementsBtn.njk"%}
-                {# Footer #}
-                {% block footer %}
-                    {% include "shared/footer.njk" %}
-                {% endblock %}
-                {# JS Scripts #}
-                {% block js %}
-                    {% if build.isDev %}
-                        <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
-                    {% else %}
-                        {# CDN imports here for production #}
-                        <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
-                    {% endif %}
-                {% endblock %}
-            </body>
-        </html>
     </head>
+    <body ondragstart="return false;" ondrop="return false;">
+        {# Header #}
+        {% block header %}
+            {% include "shared/navbar.njk" %}
+        {% endblock %}
+        {# Content #}
+        {% block content %}
+            <main id="content">
+                {{ content | safe }}
+            </main>
+        {% endblock %}
+        {# Footer #}
+        {% block footer %}
+            {% include "shared/footer.njk" %}
+        {% endblock %}
+        {# JS Scripts #}
+        {% block js %}
+            {% if build.isDev %}
+                <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
+            {% else %}
+                {# CDN imports here for production if possible #}
+                <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
+            {% endif %}
+        {% endblock %}
+    </body>
+</html>
+</head>
 </html>

@@ -1,188 +1,191 @@
+{% import "shared/macros.njk" as macros %}
 <div id="landing">
-  {# {% include "components/pcbSvg.njk" %} #}
-  <div class="text-center h-100">
-
-    <div id="lamp">
-      <div class="lamp" id="light-source">
-        <div class="gonna-give-light"></div>
-      </div>
-        <div class="landing-text position-relative">
-        <h1 class="display-4 fw-bold">Welcome to Anuvrat</h1>
-        <p class="lead fw-bold">Where Innovation Never Ends...</p>
-        </div>
-      <div id="switch-holder" class="d-flex justify-content-center">
-        <div class="switch">
-            <input type="checkbox" name="switch-inp" id="switch-inp" />
-            <label for="switch-inp"></label>
-        </div>
+    <div class="text-center h-100">
+        <div id="lamp">
+            <div class="lamp" id="light-source">
+                <div class="gonna-give-light"></div>
+            </div>
+            <div class="landing-text position-relative">
+                <h1 class="display-4 fw-bold glowable">Welcome to Anuvrat</h1>
+                <p class="lead fw-bold glowable">Where Innovation Never Ends...</p>
+            </div>
+            <div id="switch-holder" class="d-flex justify-content-center">
+                <div class="switch">
+                    <input type="checkbox" name="switch-inp" id="switch-inp"/>
+                    <label for="switch-inp"></label>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
 
-  <a class="arrow-btn no-decoration smoothScroll" href="#about">{% icon "down-arrow",
-        32 %}</a>
+    {{macros.downArrow("#about")}}
+
 </div>
 <style>
 
-  #lamp {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-  }
-  .lamp {
-    position: relative;
-    margin: 0 auto;
-    width: 0.7rem;
-    height: 10rem;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
-    background-repeat: no-repeat;
-    background-size: 0.15rem 8rem, 0.4rem 0.8rem, 0.7rem 2rem;
-    background-position: 50% 0, 0.19rem 8rem, 0 8.8rem;
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
-    animation: swinging 3.5s ease-in-out forwards infinite;
-  }
-  .lamp:before {
-    content: '';
-    position: absolute;
-  }
-  .lamp:before {
-    left: -1.65rem;
-    bottom: -4rem;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.03);
-    box-shadow: inset 2px -2px 10px rgba(255,255,255,0.07);
-    transition: all 0.15s;
-  }
-  .gonna-give-light,
-  .gonna-give-light:before {
-    position: absolute;
-  }
-  .gonna-give-light {
-    top: 10.05rem;
-    left: 0.25rem;
-    width: 0;
-    height: 1.5rem;
-    border-right: 0.2rem solid rgba(255,255,255,0.05);
-  }
-  .gonna-give-light:before {
-    content: '';
-    top: 1.5rem;
-    left: -0.35rem;
-    width: 0.9rem;
-    height: 0.9rem;
-    border-radius: 50%;
-    border: 0.2rem solid rgba(255,255,255,0.05);
-    box-shadow: 0 0 50px rgba(255,255,255,0);
-  }
-  .lamp-glow:before, .glow {
-    background: #05d9e8;
-    box-shadow: 0 2px 10px rgba(5,217,232,0.8), 0 5px 50px rgba(5,217,232,0.8), 0 8px 80px rgba(5,217,232,0.6), 0 8px 120px rgba(5,217,232,0.6);
-  }
-  body {
-    background: #6C3483;
-  }
-
-  @keyframes swinging {
-    0% {
-      transform: rotate(10deg);
+    #lamp {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
     }
-    50% {
-      transform: rotate(-5deg);
+    .lamp {
+        position: relative;
+        margin: 0 auto;
+        width: 0.7rem;
+        height: 10rem;
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        background-repeat: no-repeat;
+        background-size: 0.15rem 8rem, 0.4rem 0.8rem, 0.7rem 2rem;
+        background-position: 50% 0, 0.19rem 8rem, 0 8.8rem;
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+        animation: swinging 3.5s ease-in-out forwards infinite;
     }
-    100% {
-      transform: rotate(10deg);
+    .lamp:before {
+        content: '';
+        position: absolute;
     }
-  }
+    .lamp:before {
+        left: -1.65rem;
+        bottom: -4rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.03);
+        box-shadow: inset 2px -2px 10px rgba(255,255,255,0.07);
+        transition: all 0.15s;
+    }
+    .gonna-give-light,
+    .gonna-give-light:before {
+        position: absolute;
+    }
+    .gonna-give-light {
+        top: 10.05rem;
+        left: 0.25rem;
+        width: 0;
+        height: 1.5rem;
+        border-right: 0.2rem solid rgba(255,255,255,0.05);
+    }
+    .gonna-give-light:before {
+        content: '';
+        top: 1.5rem;
+        left: -0.35rem;
+        width: 0.9rem;
+        height: 0.9rem;
+        border-radius: 50%;
+        border: 0.2rem solid rgba(255,255,255,0.05);
+        box-shadow: 0 0 50px rgba(255,255,255,0);
+    }
+    .glow,
+    .lamp-glow:before {
+        background: #05d9e8;
+        box-shadow: 0 2px 10px rgba(5,217,232,0.8), 0 5px 50px rgba(5,217,232,0.8), 0 8px 80px rgba(5,217,232,0.6), 0 8px 120px rgba(5,217,232,0.6);
+    }
+    .glowable{
+        opacity: 0.3;
+    }
+    .text-glow{
+        opacity: 1;
+        text-shadow: 0 2px 10px rgba(5,217,232,0.8), 0 5px 50px rgba(5,217,232,0.8), 0 8px 80px rgba(5,217,232,0.6), 0 8px 120px rgba(5,217,232,0.6);
+    }
 
+    @keyframes swinging {
+        0% {
+            transform: rotate(10deg);
+        }
+        50% {
+            transform: rotate(-5deg);
+        }
+        100% {
+            transform: rotate(10deg);
+        }
+    }
 
-#switch-holder{
-    position: relative;
-    top: 20%;
-}
-  .switch {
-      position: relative;
-      height:50px;
-      width:50px;
-  }
-  .switch input{
-      visibility: hidden;
-  }
-.switch label {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 50%;
-    background: #eaeaea;
-    box-shadow:
-        0 3px 5px rgba(0,0,0,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.3),
-        inset 0 -5px 5px rgba(100,100,100,0.1),
-        inset 0 5px 5px rgba(255,255,255,0.3);
-}
-.switch label:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -8%;
-    right: -8%;
-    bottom: -8%;
-    left: -8%;
-    border-radius: inherit;
-    background: #ddd; /* Fallback */
-    background: linear-gradient(#ccc, #fff);
-    box-shadow:
-        inset 0 2px 1px rgba(0,0,0,0.15),
-        0 2px 5px rgba(200,200,200,0.1);
-}
-.switch label:before {
-    content: "";
-    position: absolute;
-    width: 20%;
-    height: 20%;
-    left: 40%;
-    top: 40%;
-    border-radius: inherit;
-    background: #969696; /* Fallback */
-    background: radial-gradient(40% 35%, #ccc, #969696 60%);
-    box-shadow:
-        inset 0 2px 4px 1px rgba(0,0,0,0.3),
-        0 1px 0 rgba(255,255,255,1),
-        inset 0 1px 0 white;
-}
-.switch input:checked ~ label { /* Button */
-	background: #e5e5e5; /* Fallback */
-    background: linear-gradient(#dedede, #fdfdfd);
-}
+    #switch-holder {
+        position: relative;
+        top: 20%;
+    }
+    .switch {
+        position: relative;
+        height: 50px;
+        width: 50px;
+    }
+    .switch input {
+        visibility: hidden;
+    }
+    .switch label {
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 50%;
+        background: #eaeaea;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -5px 5px rgba(100,100,100,0.1), inset 0 5px 5px rgba(255,255,255,0.3);
+    }
+    .switch label:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -8%;
+        right: -8%;
+        bottom: -8%;
+        left: -8%;
+        border-radius: inherit;
+        background: #ddd;
+        /* Fallback */
+        background: linear-gradient(#ccc, #fff);
+        box-shadow: inset 0 2px 1px rgba(0,0,0,0.15), 0 2px 5px rgba(200,200,200,0.1);
+    }
+    .switch label:before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        left: 40%;
+        top: 40%;
+        border-radius: inherit;
+        background: #969696;
+        /* Fallback */
+        background: radial-gradient(40% 35%, #ccc, #969696 60%);
+        box-shadow: inset 0 2px 4px 1px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,1), inset 0 1px 0 white;
+    }
+    .switch input:checked ~ label {
+        /* Button */
+        background: #e5e5e5;
+        /* Fallback */
+        background: linear-gradient(#dedede, #fdfdfd);
+    }
 
-.switch input:checked ~ label:before { /* LED */
-    background: #05d9e8; /* Fallback */
-    background: radial-gradient(40% 35%, #05d9e8, #05d9e8 60%);
-    box-shadow:
-        inset 0 3px 5px 1px rgba(0,0,0,0.1),
-        0 1px 0 rgba(255,255,255,0.4),
-        0 0 10px 2px rgba(0, 210, 0, 0.5);
-}
+    .switch input:checked ~ label:before {
+        /* LED */
+        background: #05d9e8;
+        /* Fallback */
+        background: radial-gradient(40% 35%, #05d9e8, #05d9e8 60%);
+        box-shadow: inset 0 3px 5px 1px rgba(0,0,0,0.1), 0 1px 0 rgba(255,255,255,0.4), 0 0 10px 2px rgba(0, 210, 0, 0.5);
+    }
 
-.landing-text{
-    position:relative;
-    top: 100px;
-}
-
+    .landing-text {
+        position: relative;
+        top: 100px;
+    }
 </style>
 <script>
-  document.getElementById('switch-inp').addEventListener('change', (e) => {
-    document.getElementById('light-source').classList.remove('lamp-glow')
-      if(e.target.checked)
-      {
-        document.getElementById('light-source').classList.toggle('lamp-glow')
-      }
-  })
+    document
+        .getElementById('switch-inp')
+        .addEventListener('change', (e) => {
+            document.getElementById('light-source').classList.remove('lamp-glow')
+            Array.from(document.getElementsByClassName('glowable')).forEach((elem) => {
+                    elem.classList.remove('text-glow')
+                })
+
+            if (e.target.checked) {
+                document.getElementById('light-source').classList.toggle('lamp-glow')
+                Array.from(document.getElementsByClassName('glowable')).forEach((elem) => {
+                        elem.classList.toggle('text-glow')
+                    })
+            }
+        })
 </script>
 <!-- Reference: http://www.css3transition.com/lamp-off-animation-using-css/ -->
-

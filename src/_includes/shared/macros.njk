@@ -1,0 +1,8 @@
+{# Contains common html structure functions to reuse in templates #}
+{% macro downArrow(href) %}
+    <div class="d-flex justify-content-center">
+        <a class="arrow-btn no-decoration smoothscroll" href="{{href}}">
+            <div class="arrow"></div>
+        </a>
+    </div>
+{% endmacro %}

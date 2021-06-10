@@ -18,33 +18,33 @@
     }
 </style>
 
-{% macro Card(photo, Name, role, fb, ig,linkedin, email) %}
+{% macro Card(team, loop) %}
     <div class="col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="mx-auto px-auto">
-            <div class="img-fluid border border-2"><img src="{{photo}}" alt="" style="width:100%"></div>
+            <div class="border border-2"><img src="{{team.photo}}" alt="{{team.Name}}" class="img-fluid" style="width:100%"></div>
             <div class="intro">
-                <div class="text-dark h5">{{Name}}</div>
+                <div class="text-dark h5">{{team.Name}}</div>
                 <div class="dash text-center"></div>
                 <div class="d-flex justify-content-between text-dark">
-                    <span>{{role}}</span>
+                    <span class="text-small">{{team.Role}}</span>
                     <div class="social-links no-decoration">
-                        {% if email %}
-                            <a href="mailto:{{email}}" target="_blank" class="no-decoration mx-1">
+                        {% if team.Email %}
+                            <a href="mailto:{{team.Email}}" target="_blank" class="no-decoration mx-1">
                                 <i class="fa fa-envelope"></i>
                             </a>
                         {% endif %}
-                        {% if fb %}
-                            <a href="{{fb}}" target="_blank" class="no-decoration mx-1">
+                        {% if team.Facebook %}
+                            <a href="{{team.Facebook}}" target="_blank" class="no-decoration mx-1">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         {% endif %}
-                        {% if ig %}
-                            <a href="{{ig}}" target="_blank" class="no-decoration mx-1">
+                        {% if team.Instagram %}
+                            <a href="{{team.Instagram }}" target="_blank" class="no-decoration mx-1">
                                 <i class="fa fa-instagram"></i>
                             </a>
                         {% endif %}
-                        {% if linkedin %}
-                            <a href="{{linkedin}}" target="_blank" class="no-decoration mx-1">
+                        {% if team.Linkedin %}
+                            <a href="{{team.Linkedin}}" target="_blank" class="no-decoration mx-1">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         {% endif %}
@@ -64,7 +64,7 @@
         <div class="row justify-content-around">
             {% for team in teams.advisories %}
 
-                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin, team.Email) }}
+                {{ Card(team, loop) }}
 
             {% endfor %}
         </div>
@@ -75,7 +75,7 @@
         <div class="row justify-content-around">
             {% for team in teams.head %}
 
-                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin, team.Email) }}
+                {{ Card(team, loop) }}
 
             {% endfor %}
         </div>
@@ -87,7 +87,7 @@
         <div class="row justify-content-around">
             {% for team in teams.coordinators %}
 
-                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin, team.Email) }}
+                {{ Card(team, loop) }}
 
             {% endfor %}
         </div>
@@ -99,7 +99,7 @@
         <div class="row justify-content-around">
             {% for team in teams.volunteers %}
 
-                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin, team.Email) }}
+                {{ Card(team, loop) }}
 
             {% endfor %}
         </div>
@@ -111,7 +111,7 @@
         <div class="row justify-content-around">
             {% for team in teams.advisories %}
 
-                {{ Card(team.photo,team.Name,team.Role,team.Facebook,team.Instagram,team.Linkedin, team.Email) }}
+                {{ Card(team, loop) }}
 
             {% endfor %}
         </div>

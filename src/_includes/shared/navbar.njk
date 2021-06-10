@@ -1,17 +1,29 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
     <div class="container">
-        <a class="navbar-brand text-quaternary" href="/">Anuvrat</a>
-        <button class="navbar-toggler bg-quaternary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand text-quaternary" href="/"><img src="/assets/images/logo_text.png" style="filter: invert(1);" class="text-white" width="auto" height="40"></a>
+        <button class="navbar-toggler bg-quaternary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsupportedcontent" aria-controls="navbarsupportedcontent" aria-expanded="false" aria-label="toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarsupportedcontent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 {% for item in navbarLinks %}
                     <li class="nav-item position-relative">
-                        <a class="nav-link" href="{{item.url}}">{{item.name}}</a>
+                        <a class="nav-link" href="{{item.url}}">{{item.name}}
+                            {% if item.notifications %}
+                                <span class="nav-notifier badge rounded-pill bg-dark text-glow">{{item.notifications}}</span>
+                            {% endif %}
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
 </nav>
+
+{# <style>
+.nav-notifier{
+    position: absolute;
+    top: 0px;
+    right: -5px;
+}
+</style> #}

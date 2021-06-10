@@ -1,7 +1,6 @@
 @import "./bootstrap";
 @import "./animations";
 @import "./utils";
-// @import "./pcbAnimation";
 
 body {
     @extend .bg-secondary, .text-quaternary;
@@ -48,10 +47,18 @@ body {
     height: 100vh;
     @extend .position-relative, .bg-tertiary, .text-quaternary;
 }
+
+.arrow {
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+}
 .arrow-btn {
     bottom: 40px;
-    left: 0px;
-    right: 0px;
     animation: MoveUpDown 2s linear infinite;
     @extend .text-center, .position-absolute;
     .icon {
@@ -73,36 +80,6 @@ body {
     transition: 0.5s;
 }
 
-#announcementsBtn {
-    @extend .position-sticky, .d-inline-block, .mb-4;
-    bottom: 20px;
-
-    border-radius: 50%;
-    left: 20px;
-    .badge {
-        top: 0;
-        right: 0;
-    }
-    &:hover .dropdown-menu {
-        display: block;
-        margin-top: 0; // remove the gap so it doesn't close
-    }
-    .dropdown-toggle {
-        &:after {
-            display: none;
-        }
-        &:hover,
-        &.show {
-            @extend .bg-quaternary;
-            svg {
-                fill: $primary;
-            }
-        }
-        transition: 0.2s;
-        @extend .p-4, .rounded-circle, .bg-primary, .text-quaternary;
-    }
-}
-
 .activity-image {
     height: 100%;
     width: 100%;
@@ -122,4 +99,11 @@ body {
     .social-links > * {
         @extend .no-decoration;
     }
+}
+
+.activity-content{
+    font-size: 18px;
+}
+.activity-icon{
+    font-size: 128px;
 }
