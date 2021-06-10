@@ -6,8 +6,8 @@
                 <div class="gonna-give-light"></div>
             </div>
             <div class="landing-text position-relative">
-                <h1 class="display-4 fw-bold">Welcome to Anuvrat</h1>
-                <p class="lead fw-bold">Where Innovation Never Ends...</p>
+                <h1 class="display-4 fw-bold glowable">Welcome to Anuvrat</h1>
+                <p class="lead fw-bold glowable">Where Innovation Never Ends...</p>
             </div>
             <div id="switch-holder" class="d-flex justify-content-center">
                 <div class="switch">
@@ -82,8 +82,12 @@
         background: #05d9e8;
         box-shadow: 0 2px 10px rgba(5,217,232,0.8), 0 5px 50px rgba(5,217,232,0.8), 0 8px 80px rgba(5,217,232,0.6), 0 8px 120px rgba(5,217,232,0.6);
     }
-    body {
-        background: #6C3483;
+    .glowable{
+        opacity: 0.3;
+    }
+    .text-glow{
+        opacity: 1;
+        text-shadow: 0 2px 10px rgba(5,217,232,0.8), 0 5px 50px rgba(5,217,232,0.8), 0 8px 80px rgba(5,217,232,0.6), 0 8px 120px rgba(5,217,232,0.6);
     }
 
     @keyframes swinging {
@@ -171,15 +175,16 @@
     document
         .getElementById('switch-inp')
         .addEventListener('change', (e) => {
-            document
-                .getElementById('light-source')
-                .classList
-                .remove('lamp-glow')
+            document.getElementById('light-source').classList.remove('lamp-glow')
+            Array.from(document.getElementsByClassName('glowable')).forEach((elem) => {
+                    elem.classList.remove('text-glow')
+                })
+
             if (e.target.checked) {
-                document
-                    .getElementById('light-source')
-                    .classList
-                    .toggle('lamp-glow')
+                document.getElementById('light-source').classList.toggle('lamp-glow')
+                Array.from(document.getElementsByClassName('glowable')).forEach((elem) => {
+                        elem.classList.toggle('text-glow')
+                    })
             }
         })
 </script>
