@@ -15,9 +15,9 @@ module.exports = {
     },
     {
       Timestamp: "4/21/2021 13:57:45",
-      Email: "b170091@nitsikkim.ac.in",
+      Email: "b170062@nitsikkim.ac.in",
       Name: "Prashant Gupta",
-      Email: "b170091@nitsikkim.ac.in",
+      Email: "b170062@nitsikkim.ac.in",
       Role: "Advisory Committee",
       Instagram: "https://www.instagram.com/prashantlfh?r=nametag",
       Linkedin: "https://www.linkedin.com/in/prashant-gupta-364548170",
@@ -259,9 +259,9 @@ module.exports = {
   },
   {
     Timestamp: "4/21/2021 13:50:22",
-    Email: "b180091@nitsikkim.ac.in",
+    Email: "b180094@nitsikkim.ac.in",
     Name: "Abadhesh kumar",
-    Email: "b180091@nitsikkim.ac.in",
+    Email: "b180094@nitsikkim.ac.in",
     Role: "Treasurer",
     Instagram: "",
     Linkedin: "",
