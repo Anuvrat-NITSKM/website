@@ -1,7 +1,7 @@
 import {
     // Alert,
     // Button,
-    // Carousel,
+    Carousel,
     Collapse,
     // Dropdown,
     Modal,
