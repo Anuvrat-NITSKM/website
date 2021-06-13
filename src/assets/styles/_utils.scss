@@ -23,3 +23,7 @@
 .pre-text{
     white-space: pre-wrap;
 }
+
+.hover-shadow:hover{
+    @extend .shadow-lg;
+}
