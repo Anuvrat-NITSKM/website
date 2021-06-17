@@ -7,7 +7,7 @@ import {
     Modal,
     // Popover, // Needs manual initialization, code below
     // Scrollspy,
-    // Tab,
+    Tab,
     // Toast,
     // Tooltip // Needs manual initialization, code below
   } from "bootstrap"

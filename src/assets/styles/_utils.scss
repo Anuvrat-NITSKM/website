@@ -1,4 +1,18 @@
 // utils
+
+@function hexToRGBString($hexColor) {
+    @return "#{red($hexColor)},#{green($hexColor)},#{blue($hexColor)}";
+}
+
+$misc-colors: (
+  bulb-color: hexToRGBString(#E04009)
+);
+:root {
+  @each $name, $color in $misc-colors {
+    --#{$name}: #{$color};
+  }
+}
+
 .heading {
     @extend .h1, .text-center;
     position: relative;

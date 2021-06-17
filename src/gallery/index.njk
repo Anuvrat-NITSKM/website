@@ -1,73 +1,125 @@
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<div id="gallery" class="container-fluid mb-4">
-    <div class="heading">Gallery</div>
-    <div class="grid mx-auto" data-masonry='{ "itemSelector": ".grid-item", "isFitWidth": true}'>
-        {% for image in gallery %}
-            <a data-bs-toggle="modal" href="#imageModal" data-bs-slide-to="{{loop.index - 1}}" class="grid-item no-decoration" onclick="showModal(event)">
-                <img class="img-fluid" src="/assets/images/gallery/{{image}}"/>
-            </a>
+<div id="gallery" class="container mb-4">
+  <div class="heading">Gallery</div>
+
+  <ul class="nav nav-pills mb-3 w-100 justify-content-center text-primary" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active no-decoration" id="showall-tab" data-bs-toggle="pill" href="#showall" role="tab" aria-controls="showall" aria-selected="true">Show All</a>
+    </li>
+    {% for key, value in gallery %}
+      <li class="nav-item">
+        <a class="nav-link no-decoration" id="{{key}}-tab" data-bs-toggle="pill" href="#{{key}}" role="tab" aria-controls="{{key}}" aria-selected="false">{{key | title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="tab-content" id="pills-tabcontent">
+    <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
+      <div class="row justify-content-center">
+        {% for folder, images in gallery %}
+          {% for image in images %}
+            <div class="col-lg-3 col-md-4 col-6 g-0 hover-shadow">
+              <div class="gallery-img m-2">
+                <a data-bs-toggle="modal" href="#imagemodal" class="no-decoration" onclick="showmodal(event)">
+                  <img class="w-100 h-100" src="/assets/images/gallery/{{folder}}/{{image}}"/>
+                </a>
+              </div>
+            </div>
+          {% endfor %}
         {% endfor %}
+      </div>
     </div>
+
+    {% for folder, images in gallery %}
+      <div class="tab-pane fade" id="{{folder}}" role="tabpanel" aria-labelledby="{{folder}}-tab">
+        <div class="row justify-content-center">
+          {% for image in images %}
+            <div class="col-lg-3 col-md-4 col-6 g-0 hover-shadow">
+              <div class="gallery-img m-2">
+                <a data-bs-toggle="modal" href="#imagemodal" class="no-decoration" onclick="showmodal(event)">
+                  <img class="w-100 h-100" src="/assets/images/gallery/{{folder}}/{{image}}"/>
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
 </div>
 
-<div class="modal" tabindex="-1" data-bs-backdrop="static" id="imageModal">
+<div class="modal" tabindex="-1" data-bs-backdrop="static" id="imagemodal">
   <div class="modal-dialog modal-xl show">
     <div class="modal-content p-0 m-0">
-        <div class="modal-body p-0 m-0 postition-relative">
-            <button type="button" class="btn-close btn-close-white modal-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
-            <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                {% for image in gallery %}
-                    <div class="carousel-item">
-                        <img class="w-100 h-100 d-block" src="/assets/images/gallery/{{image}}" />
-                    </div>
-                {% endfor %}
+      <div class="modal-body p-0 m-0 postition-relative">
+        <button type="button" class="btn-close btn-close-white modal-close-btn" data-bs-dismiss="modal" aria-label="close"></button>
+        <div id="modalcarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            {% for folder, images in gallery %}
+              {% for image in images %}
+                <div class="carousel-item">
+                  <img class="w-100 h-100 d-block" src="/assets/images/gallery/{{folder}}/{{image}}"/>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+              {% endfor %}
+            {% endfor %}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#modalcarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#modalcarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-
 <style>
-#gallery{
-    position: relative;
-}
-.grid-item {
-  margin: 8px;
-  border: solid var(--bs-primary) thin;
-}
-.grid-item img{
-  max-width: 20vw;
-}
-.modal-close-btn{
+
+  .modal-close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     z-index: 1200;
-}
+    font-size: 32px;
+    color: black;
+  }
+  .gallery-img {
+    position: relative;
+    transition-duration: 0.4s;
+    height: 150px;
+    animation: popAnim 0.5s;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+
+  .gallery-img img {
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12);
+  }
+
+  #pills-tab .active {
+      background-color: var(--bs-tertiary);
+  }
 </style>
 
 <script>
-function showModal(e){
-    const carouselItems = document.querySelector('#modalCarousel .carousel-inner').children
-    const setActive = e.currentTarget.getAttribute('data-bs-slide-to')
-    for(const item of carouselItems) {
-        if(item.classList.contains('active'))
-        {
-            item.classList.remove('active')
-        }
+  function showmodal(e) {
+    const carouselItems = document.querySelector('#modalcarousel .carousel-inner').children
+    const activeSrc = e.target.getAttribute('src')
+    console.log(activeSrc)
+    for (const item of carouselItems) {
+      if (item.classList.contains('active')) {
+        item.classList.remove('active')
+      }
+      if (item.children[0].getAttribute('src') === activeSrc) {
+        item.classList.add('active')
+      }
     }
-    carouselItems[setActive].classList.add('active')
     e.preventDefault();
-}
+  }
 </script>

@@ -10,7 +10,7 @@ const otherEvents = [
         description: `A programming language serves as a medium of communication between the computer and the human and to be a programmer is to sign yourself up for a new life of constant learning with which you can change the course of humankind.
         Understanding the importance of coding and the opportunities it provides, ANUVRAT is organising a learning event, &quot;CODikhsit – Session on Coding Essentials&quot;, where the student can grasp the basic concepts and get familiarized with some of the most important coding languages.`,
         thumbnail: "/assets/images/events/codikshit.jpg",
-        date: "2021-06-06T06:05:09Z",
+        date: "2021-06-14T06:05:09Z", // originally "2021-06-06T06:05:09Z",
         link: ``
     }
 ]
