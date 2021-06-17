@@ -111,7 +111,7 @@
   function showmodal(e) {
     const carouselItems = document.querySelector('#modalcarousel .carousel-inner').children
     const activeSrc = e.target.getAttribute('src')
-    console.log(activeSrc)
+
     for (const item of carouselItems) {
       if (item.classList.contains('active')) {
         item.classList.remove('active')
