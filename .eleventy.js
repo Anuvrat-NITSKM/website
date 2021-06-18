@@ -5,6 +5,8 @@ const markdownIt = require('markdown-it')
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
+const pairedShortcodes = require('./utils/shortcodes-paired.js')
+
 // const iconsprite = require('./utils/iconsprite.js')
 const pluginDate = require("eleventy-plugin-date");
 
@@ -27,6 +29,11 @@ module.exports = function (config) {
     // Shortcodes
     Object.keys(shortcodes).forEach((shortcodeName) => {
         config.addShortcode(shortcodeName, shortcodes[shortcodeName])
+    })
+
+    // Paired Shortcodes
+    Object.keys(pairedShortcodes).forEach((shortcodeName) => {
+        config.addPairedShortcode(shortcodeName, pairedShortcodes[shortcodeName])
     })
 
     // Icon Sprite

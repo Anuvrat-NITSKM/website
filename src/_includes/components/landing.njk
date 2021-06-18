@@ -21,8 +21,9 @@
     {{macros.downArrow("#about")}}
 
 </div>
-<style>
 
+{% styles %}
+#landing{
     #lamp {
         position: relative;
         overflow: hidden;
@@ -45,8 +46,6 @@
     .lamp:before {
         content: '';
         position: absolute;
-    }
-    .lamp:before {
         left: -1.65rem;
         bottom: -4rem;
         width: 4rem;
@@ -170,7 +169,10 @@
         position: relative;
         top: 100px;
     }
-</style>
+}
+
+{% endstyles %}
+
 <script>
     document
         .getElementById('switch-inp')

@@ -17,6 +17,5 @@ let files = new Map();
         console.log(e)
     }
 })
-console.log(files)
 
 module.exports = files
