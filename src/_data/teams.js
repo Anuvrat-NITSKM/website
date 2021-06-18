@@ -1,5 +1,5 @@
 module.exports = {
-  fic:  [
+  fic:[
     {
       Timestamp: "4/21/2021 13:57:45",
       Email: "",
@@ -15,7 +15,7 @@ module.exports = {
     {
       Timestamp: "4/21/2021 13:57:45",
       Email: "",
-      Name: "Dr. Hemant Kumar Kathania",
+      Name: "Dr. Hemant K. Kathania",
       Email: "",
       Role: "Faculty in-charge",
       Instagram: "",
@@ -73,6 +73,18 @@ module.exports = {
       Facebook: "",
       Description: "",
       photo: "/assets/images/image/girija.jpg"
+    },
+    {
+      Timestamp: "4/20/2021 14:05:20",
+      Email: "",
+      Name: "Durgesh Gupta",
+      Email: "",
+      Role: "Advisory Committee",
+      Instagram: "",
+      Linkedin: "https://www.linkedin.com/in/durgesh-gupta-a75b25186",
+      Facebook: "",
+      Description: "",
+      photo: "/assets/images/image/durgesh gupta.jpg"
     }
   ],
   volunteers: [{
@@ -126,7 +138,7 @@ module.exports = {
     },
     {
       Timestamp: "4/20/2021 17:41:10",
-      Email: "b20¬¬0098@nitsikkim.ac.in",
+      Email: "b200098@nitsikkim.ac.in",
       Name: "Sakshee Rajpoot",
       Email: "b200098@nitsikkim.ac.in",
       Role: "Volunteer",
@@ -200,7 +212,7 @@ module.exports = {
     {
       Timestamp: "4/21/2021 15:00:30",
       Email: "b180087@nitsikkim.ac.in",
-      Name: "ASHWINI SAIKIRAN",
+      Name: "Ashwini Saikiran",
       Email: "b180087@nitsikkim.ac.in",
       Role: "Resource Management Lead",
       Instagram: "",
@@ -212,7 +224,7 @@ module.exports = {
     {
       Timestamp: "4/21/2021 17:45:44",
       Email: "b180066@nitsikkim.ac.in",
-      Name: "MIDIDODLA JASWANTH SAI",
+      Name: "Mididodla Jaswanth Sai",
       Email: "b180066@nitsikkim.ac.in",
       Role: "Editorial Lead",
       Instagram: "https://www.instagram.com/jaswanthsai0909/",
@@ -254,7 +266,7 @@ module.exports = {
       Linkedin: "https://www.linkedin.com/in/shagir-husain-19a4911a4",
       Facebook: "",
       Description: "",
-      photo: "/assets/images/image/Shagir Husain.png"
+      photo: "/assets/images/image/shagir.jpg"
     },
     {
       Timestamp: "4/20/2021 19:51:00",
