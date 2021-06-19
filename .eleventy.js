@@ -9,13 +9,21 @@ const pairedShortcodes = require('./utils/shortcodes-paired.js')
 const imageShortcode = require('./utils/image.js')
 // const iconsprite = require('./utils/iconsprite.js')
 const pluginDate = require("eleventy-plugin-date");
+const pluginLazyImages = require("eleventy-plugin-lazyimages");
+const { fortawesomeBrandsPlugin } = require('@vidhill/fortawesome-brands-11ty-shortcode');
+const { fortawesomeFreeRegularPlugin } = require('@vidhill/fortawesome-free-regular-11ty-shortcode');
+
 
 module.exports = function (config) {
     // Plugins
     console.log("Loading Plugins....")
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
-    config.addPlugin(pluginDate);
+    config.addPlugin(pluginDate)
+    config.addPlugin(pluginLazyImages, {imgSelector: 'img:not(.ignore-lazy)'})
+
+    config.addPlugin(fortawesomeBrandsPlugin);
+    config.addPlugin(fortawesomeFreeRegularPlugin);
 
 
     // Filters

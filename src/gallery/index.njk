@@ -53,7 +53,7 @@
     <div class="modal-content p-0 m-0">
       <div class="modal-body p-0 m-0 postition-relative">
         <button type="button" class="btn-close btn-close-white modal-close-btn" data-bs-dismiss="modal" aria-label="close"></button>
-        <div id="modalcarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" data-bs-touch="false">
+        <div id="modalcarousel" class="carousel slide" data-bs-ride="carousel" >
           <div class="carousel-inner">
             {% for folder, images in gallery %}
               {% for image in images %}
@@ -108,20 +108,17 @@
       background-color: var(--bs-tertiary);
   }
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
-
 {% endstyles %}
 
 <script>
   function showmodal(e) {
     const carouselItems = document.querySelector('#modalcarousel .carousel-inner').children
     const activeSrc = e.target.getAttribute('src')
-
     for (const item of carouselItems) {
       if (item.classList.contains('active')) {
         item.classList.remove('active')
       }
-      if (item.children[0].getAttribute('src') === activeSrc) {
+      if ( item.children[0].getAttribute('data-src') === activeSrc || item.children[0].getAttribute('src') === activeSrc) {
         item.classList.add('active')
       }
     }

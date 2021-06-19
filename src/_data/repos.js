@@ -26,9 +26,9 @@ async function fetchProjectRepos(){
         q: 'topic:project+org:'+ORG_NAME
     })
     const items = data.items
-    for (let repo of items) {
-        repo.readme = await getReadme(repo.name)
-    }
+    // for (let repo of items) {
+    //     repo.readme = await getReadme(repo.name)
+    // }
 
     await asset.save(items, 'json')
     return items
@@ -44,9 +44,9 @@ async function fetchResourceRepos(){
         q: 'topic:resources+org:'+ORG_NAME
     })
     const items = data.items
-    for (let repo of items) {
-        repo.readme = await getReadme(repo.name)
-    }
+    // for (let repo of items) {
+    //     repo.readme = await getReadme(repo.name)
+    // }
 
     await asset.save(items, 'json')
     return items

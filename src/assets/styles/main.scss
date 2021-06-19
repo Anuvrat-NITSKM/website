@@ -84,16 +84,9 @@ body {
 }
 
 
-#resource-item {
-    img {
-        @extend .img-fluid;
-    }
-}
-
 #footer {
     @extend .bg-tertiary;
     .social-links > * {
         @extend .no-decoration;
     }
 }
-

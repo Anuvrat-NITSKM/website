@@ -88,6 +88,7 @@ module.exports = class {
 
     // render the JS file
     async render({ webpackConfig }) {
+        console.log('Loading Webpack...')
         try {
             const result = await this.compile(webpackConfig)
             return result

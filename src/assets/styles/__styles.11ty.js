@@ -101,6 +101,7 @@ module.exports = class {
 
     // render the CSS file
     async render({ entryPath }) {
+        console.log('Loading SASS...')
         try {
             const css = await this.compile({ file: entryPath })
             const result = await this.minify(css)

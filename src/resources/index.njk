@@ -3,7 +3,7 @@ title: Resources - Anuvrat, NIT Sikkim
 ---
 {# Add appropriate description#}
 
-<style>
+{%styles %}
     .item .box {
         text-align: center;
         background-repeat: no-repeat;
@@ -28,16 +28,16 @@ title: Resources - Anuvrat, NIT Sikkim
     }
 
     .item:hover .cover {
-        opacity: 0.8;
+        opacity: 1;
     }
-</style>
+{% endstyles %}
 
 {% import "shared/macros.njk" as macro %}
 
 <div id="resources" class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for repo in repos.resourceRepos %}
-            {{macro.repoCard(repo)}}
+            {{macro.repoCard(repo, gh)}}
         {%else %}
             <div class="h3">Coming Soon...</div>
         {% endfor %}
