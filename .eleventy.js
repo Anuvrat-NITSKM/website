@@ -6,40 +6,53 @@ const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
 const pairedShortcodes = require('./utils/shortcodes-paired.js')
-
+const imageShortcode = require('./utils/image.js')
 // const iconsprite = require('./utils/iconsprite.js')
 const pluginDate = require("eleventy-plugin-date");
 
 module.exports = function (config) {
     // Plugins
+    console.log("Loading Plugins....")
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
     config.addPlugin(pluginDate);
 
+
     // Filters
+    console.log("Loading Filters....")
     Object.keys(filters).forEach((filterName) => {
         config.addFilter(filterName, filters[filterName])
     })
 
     // Transforms
+    console.log("Loading Transforms....")
     Object.keys(transforms).forEach((transformName) => {
         config.addTransform(transformName, transforms[transformName])
     })
 
     // Shortcodes
+    console.log("Loading Shortcodes....")
     Object.keys(shortcodes).forEach((shortcodeName) => {
         config.addShortcode(shortcodeName, shortcodes[shortcodeName])
     })
 
     // Paired Shortcodes
+    console.log("Loading Paired Shortcodes....")
     Object.keys(pairedShortcodes).forEach((shortcodeName) => {
         config.addPairedShortcode(shortcodeName, pairedShortcodes[shortcodeName])
     })
 
     // Icon Sprite
+    // console.log("Loading Icon Sprite....")
     // config.addNunjucksAsyncShortcode('iconsprite', iconsprite)
 
+    // Eleventy Img
+    // console.log("Loading Eleventy Img....")
+    // config.addNunjucksAsyncShortcode('image', imageShortcode)
+
+
     // Asset Watch Targets
+    console.log("Adding asset watch target....")
     config.addWatchTarget('./src/assets')
 
     // Markdown
@@ -57,7 +70,7 @@ module.exports = function (config) {
     config.addLayoutAlias('base', 'base.njk')
 
     // Pass-through files
-    config.addPassthroughCopy('src/robots.txt')
+    // config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
 

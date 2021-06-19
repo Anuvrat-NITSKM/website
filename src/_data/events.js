@@ -55,5 +55,6 @@ async function getEvents(){
 }
 
 module.exports = async () => {
+    console.log("Fetching Youtube Playlists...")
     return await getEvents()
 }

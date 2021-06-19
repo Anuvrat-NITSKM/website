@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 const path = require("path");
 
+console.log("Fetching Gallery Files...")
 const folderNames = fs.readdirSync(path.resolve(__dirname,"../assets/images/gallery"));
 
 const sequence = ['online', 'archives']

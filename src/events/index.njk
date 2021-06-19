@@ -6,7 +6,9 @@ title: Events - Anuvrat, NIT Sikkim
 {% macro Accordion(event, loop) %}
     <a class="w-100 mt-3 mb-1 no-decoration" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{event.name |  replace(" ", "-")}}" aria-expanded="false" aria-controls="collapse-{{event.name |  replace(" ", "-")}}">
         <div class="row p-0 mt-2" style="min-height: 150px">
-            <div class="col-md-12 col-lg-3 text-center"><img src="{{event.thumbnail}}" class="img-thumbnail w-100 h-100" style="min-height: 140px"/></div>
+            <div class="col-md-12 col-lg-3 text-center">
+                <img src="{{event.thumbnail}}" class="img-thumbnail w-100 h-100" style="min-height: 140px"/>
+            </div>
             <div class="display-6 fw-normal py-3 col-md-12 col-lg-9 justify-items-center">
                 {{ event.name }}
             </div>

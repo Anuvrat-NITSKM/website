@@ -54,6 +54,7 @@ async function fetchResourceRepos(){
 
 
 module.exports = async function () {
+    console.log("Fetching Github Repos...")
     const projectRepos = await fetchProjectRepos()
     const resourceRepos = await fetchResourceRepos()
     return {projectRepos, resourceRepos}

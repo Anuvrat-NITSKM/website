@@ -1085,7 +1085,7 @@
   dependencies:
     "@octokit/openapi-types" "^7.2.3"
 
-"@popperjs/core@^2.8.2":
+"@popperjs/core@^2.9.2":
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
   integrity sha512-VZMYa7+fXHdwIq1TDhSXoVmSPEGM/aa+6Aiq3nVVJ9bXr24zScr+NlKFKC3iPljA7ho/GAZr+d2jOf5GIRC30Q==
@@ -1629,10 +1629,10 @@ blob@0.0.5:
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
-bootstrap@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.1.tgz#e7939d599119dc818a90478a2a299bdaff037e09"
-  integrity sha512-Fl79+wsLOZKoiU345KeEaWD0ik8WKRI5zm0YSPj2oF1Qr+BO7z0fco6GbUtqjoG1h4VI89PeKJnMsMMVQdKKTw==
+bootstrap@^5.0.0-beta3:
+  version "5.0.0-beta3"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.0-beta3.tgz#c959f61fbd03667a1b158f763856994859d7a465"
+  integrity sha512-0urccjfIOzhrb9qJysN8XW/DRw6rg3zH7qLeKIp4Zyl8+Ens4JWB0NC0cB5AhnSFPd2tftRggjwCMxablo6Tpg==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -4741,10 +4741,10 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.32.8:
-  version "1.34.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.34.1.tgz#30f45c606c483d47b634f1e7371e13ff773c96ef"
-  integrity sha512-scLA7EIZM+MmYlej6sdVr0HRbZX5caX5ofDT9asWnUJj21oqgsC+1LuNfm0eg+vM0fCTZHhwImTiCU0sx9h9CQ==
+sass@^1.35.1:
+  version "1.35.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.35.1.tgz#90ecf774dfe68f07b6193077e3b42fb154b9e1cd"
+  integrity sha512-oCisuQJstxMcacOPmxLNiLlj4cUyN2+8xJnG7VanRoh2GOLr9RqkvI4AxA4a6LHVg/rsu+PmxXeGhrdSF9jCiQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
