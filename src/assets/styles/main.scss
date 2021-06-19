@@ -13,13 +13,14 @@ body {
     padding-top: 80px;
 }
 
+
 .navbar-nav .nav-item {
     @extend .mx-md-2;
     :not(.active) {
         @extend .anim-hoverUnderline, .text-primary;
     }
     .active {
-        color: $quaternary !important;
+        @extend .text-senary;
         &:after {
             content: "";
             height: 2px;
@@ -28,7 +29,7 @@ body {
             right: 0;
             margin: auto;
             position: absolute;
-            background: $quaternary;
+            @extend .bg-senary;
             width: 100%;
         }
         pointer-events: none;

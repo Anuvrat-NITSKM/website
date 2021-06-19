@@ -9,8 +9,8 @@
                 {% for item in navbarLinks %}
                     <li class="nav-item position-relative">
                         <a class="nav-link" href="{{item.url}}">{{item.name}}
-                            {% if item.notifications %}
-                                <span class="nav-notifier badge rounded-pill bg-dark text-glow">{{item.notifications}}</span>
+                            {% if item.name == 'Events' %}
+                                <span class="nav-notifier badge rounded-pill bg-senary text-glow">{{events.upcoming | length}}</span>
                             {% endif %}
                         </a>
                     </li>
@@ -27,3 +27,5 @@
     right: -5px;
 }
 </style> #}
+
+

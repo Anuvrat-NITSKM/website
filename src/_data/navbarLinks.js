@@ -1,16 +1,13 @@
-const announcements = require('./announcements');
-
-const eventAnnouncements = announcements.filter((d) => d.type && d.type === 'EVENT')
-
-module.exports = [
+module.exports = async function () {
+    console.log('Creating Navbar Content...')
+    return [
     {
         name: "Home",
         url: "/"
     },
     {
         name: "Events",
-        url: "/events/",
-        notifications: eventAnnouncements
+        url: "/events/"
     },
     {
         name: "Resources",
@@ -29,3 +26,4 @@ module.exports = [
         url: "/team/"
     }
 ]
+}
