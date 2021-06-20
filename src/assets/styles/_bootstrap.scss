@@ -1,5 +1,4 @@
 // Bootstrap configuration
-
 @import "node_modules/bootstrap/scss/_functions";
 @import "node_modules/bootstrap/scss/_variables";
 
@@ -8,13 +7,16 @@ $secondary: #01012b;
 $tertiary: #011B56;
 $quaternary: #d1f7ff;
 $quinary: #005678;
+$senary: #E04009;
 
 $custom-colors: (
     "primary":$primary,
     "secondary": $secondary,
     "tertiary": $tertiary,
     "quaternary": $quaternary,
-    "quinary": $quinary
+    "quinary": $quinary,
+    "senary": $senary
+
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 $enable-rounded: false;

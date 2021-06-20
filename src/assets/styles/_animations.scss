@@ -18,7 +18,7 @@
         right: 0;
         margin: auto;
         position: absolute;
-        background: $primary;
+        background: $senary;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
     }
@@ -26,3 +26,14 @@
         width: 100%;
     }
 }
+
+@keyframes popAnim {
+    0% {
+      opacity: 0;
+      transform: scale3d(.3,.3,.3);
+    }
+    50% {
+      opacity: 1;
+    }
+
+  }

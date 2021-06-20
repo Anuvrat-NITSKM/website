@@ -1,4 +1,23 @@
 // utils
+
+@function hexToRGBString($hexColor) {
+    @return "#{red($hexColor)},#{green($hexColor)},#{blue($hexColor)}";
+}
+
+$misc-colors: (
+  bulb-color: hexToRGBString(#E04009)
+);
+:root {
+  @each $name, $color in $misc-colors {
+    --#{$name}: #{$color};
+  }
+}
+
+.text-glow{
+    opacity: 1 !important;
+    text-shadow: 0 2px 10px rgba(var(--bulb-color),0.8), 0 5px 50px rgba(var(--bulb-color),0.8), 0 8px 80px rgba(var(--bulb-color),0.6), 0 8px 120px rgba(var(--bulb-color),0.6);
+}
+
 .heading {
     @extend .h1, .text-center;
     position: relative;
@@ -22,4 +41,8 @@
 
 .pre-text{
     white-space: pre-wrap;
+}
+
+.hover-shadow:hover{
+    @extend .shadow-lg;
 }

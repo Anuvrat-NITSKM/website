@@ -1,8 +1,8 @@
 ---
 title: Projects - Anuvrat, NIT Sikkim
 ---
-{# Add appropriate description#}
-<style>
+{# Add appropriate description #}
+{%styles %}
     .item .box {
         text-align: center;
         background-repeat: no-repeat;
@@ -29,27 +29,14 @@ title: Projects - Anuvrat, NIT Sikkim
     .item:hover .cover {
         opacity: 1;
     }
-</style>
+{%endstyles %}
 
+
+{% import "shared/macros.njk" as macro %}
 <div id="projects" class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for repo in repos.projectRepos %}
-        <div class="col">
-            <a href="{{repo.html_url | url}}" class="no-decoration" target="_blank">
-                <div class="card h-100 item bg-primary text-secondary shadow-sm justify-content-around">
-                    <div class="box"
-                        style="background-image:url(https://github.com/{{gh.ORG_NAME}}/{{repo.name}}/raw/{{gh.DEFAULT_BRANCH}}/thumbnail.jpg)">
-                        <div class="cover d-flex align-items-center justify-content-center">
-                            <div>{{repo.description}}</div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="text-center h5 d-flex align-items-center justify-content-center" style="min-height: 50px;">
-                            {{repo.name | reformatRepoName}}</div>
-                    </div>
-                </div>
-            </a>
-        </div>
+            {{macro.repoCard(repo, gh)}}
         {% else %}
         <div class="h3">Coming Soon...</div>
         {% endfor %}

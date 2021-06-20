@@ -1,3 +1,4 @@
+const moment = require("moment");
 
 module.exports = {
     obfuscate: function (str) {
@@ -18,5 +19,9 @@ module.exports = {
 
     where: function(arr, key, value){
         return arr.filter((d) => d[key] === value)
+    },
+    timestampFormat: function (timestamp, format, offset=0){
+        // IST time zone added already so subtracting it
+        return moment(timestamp).utcOffset(offset).format(format)
     }
 }

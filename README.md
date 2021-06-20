@@ -25,10 +25,11 @@ Note: Whenever starting a new work always create a new branch from `main` branch
 - Execute `git checkout -b <your-branch-name>`
 
 ## Documentations
-https://mozilla.github.io/nunjucks/
-https://www.11ty.dev/docs/
-https://getbootstrap.com/docs/5.0/getting-started/introduction/
-https://sass-lang.com/documentation
+* https://mozilla.github.io/nunjucks/
+* https://www.11ty.dev/docs/
+* https://getbootstrap.com/docs/5.0/getting-started/introduction/
+* https://sass-lang.com/documentation
+
 
 (HTML CSS JS) https://developer.mozilla.org/en-US/docs/Web/Reference
 
@@ -48,8 +49,6 @@ yarn install
 
 * CSS Pipeline (Sass, CleanCSS)
 * JS Bundling (Webpack)
-* SVG Icon Sprite Generation
-* Critical CSS
 * HTML Minification
 * No external builds, everything runs through 11ty
 
@@ -57,20 +56,16 @@ yarn install
 ## CSS
 
 Styling works with Sass. The main index file is in `src/assets/styles/main.scss`. Import any SCSS code you want in there; it will be processed and optimized. The output is in `dist/assets/styles/main.css`
+`styles` shortcode can also be used within components to write sass.
 
 ## JS
 
 Javascript can be written in ES6 syntax. The main index file is in `src/assets/scripts/main.js`. It will be transpiled to ES5 with babel, bundled together with webpack, and minified in production. The output is in `dist/assets/scripts/main.js`
 
-## SVG Icons
+## Improvements That Can be Done
 
-All SVG files added to `src/assets/icons` will be bundled into a `symbol` sprite file. The SVG filename will then be used as the symbol identifier and the icon can be used as a shortcode.
+* Store Images in the cloud (eg. firebase, imgur) and use eleventy-img to download and optimize images
 
-For example, if you have a `github.svg` file in that folder, you can display it anywhere by using `{% icon "github" %}` in your templates.
-
-## Critical CSS
-
-Currently, critical CSS will only be inlined in the head of the homepage. This is done by using the [critical](https://github.com/addyosmani/critical) package in an automatic transform.
 
 ## Credits
 

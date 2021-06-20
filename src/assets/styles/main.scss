@@ -13,13 +13,14 @@ body {
     padding-top: 80px;
 }
 
+
 .navbar-nav .nav-item {
     @extend .mx-md-2;
     :not(.active) {
         @extend .anim-hoverUnderline, .text-primary;
     }
     .active {
-        color: $quaternary !important;
+        @extend .text-senary;
         &:after {
             content: "";
             height: 2px;
@@ -28,7 +29,7 @@ body {
             right: 0;
             margin: auto;
             position: absolute;
-            background: $quaternary;
+            @extend .bg-senary;
             width: 100%;
         }
         pointer-events: none;
@@ -45,6 +46,8 @@ body {
 
 #landing {
     height: 100vh;
+    background-image: url('/assets/images/landing.jpg');
+    background-size: cover;
     @extend .position-relative, .bg-tertiary, .text-quaternary;
 }
 
@@ -80,30 +83,10 @@ body {
     transition: 0.5s;
 }
 
-.activity-image {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#resource-item {
-    img {
-        @extend .img-fluid;
-    }
-}
 
 #footer {
     @extend .bg-tertiary;
     .social-links > * {
         @extend .no-decoration;
     }
-}
-
-.activity-content{
-    font-size: 18px;
-}
-.activity-icon{
-    font-size: 128px;
 }
