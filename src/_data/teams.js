@@ -1,5 +1,30 @@
 module.exports = {
-  fic: [],
+  fic:[
+    {
+      Timestamp: "4/21/2021 13:57:45",
+      Email: "",
+      Name: "Prof.Mahesh Chandra Govil",
+      Email: "",
+      Role: "Patron",
+      Instagram: "",
+      Linkedin: "https://www.linkedin.com/in/mahesh-govil-0275271a6",
+      Facebook: "",
+      Description: "",
+      photo: "/assets/images/image/dr.mahesh.png"
+    },
+    {
+      Timestamp: "4/21/2021 13:57:45",
+      Email: "",
+      Name: "Dr. Hemant K. Kathania",
+      Email: "",
+      Role: "Faculty in-charge",
+      Instagram: "",
+      Linkedin: "https://www.linkedin.com/in/hemant-kathania-71583947/",
+      Facebook: "https://www.facebook.com/hemant.kathaniaiitguwahati",
+      Description: "",
+      photo: "/assets/images/image/dr.hemant.jpg"
+    },
+],
   advisories: [
     {
       Timestamp: "4/21/2021 13:57:45",
@@ -15,9 +40,9 @@ module.exports = {
     },
     {
       Timestamp: "4/21/2021 13:57:45",
-      Email: "b170091@nitsikkim.ac.in",
+      Email: "b170062@nitsikkim.ac.in",
       Name: "Prashant Gupta",
-      Email: "b170091@nitsikkim.ac.in",
+      Email: "b170062@nitsikkim.ac.in",
       Role: "Advisory Committee",
       Instagram: "https://www.instagram.com/prashantlfh?r=nametag",
       Linkedin: "https://www.linkedin.com/in/prashant-gupta-364548170",
@@ -48,6 +73,18 @@ module.exports = {
       Facebook: "",
       Description: "",
       photo: "/assets/images/image/girija.jpg"
+    },
+    {
+      Timestamp: "4/20/2021 14:05:20",
+      Email: "",
+      Name: "Durgesh Gupta",
+      Email: "",
+      Role: "Advisory Committee",
+      Instagram: "",
+      Linkedin: "https://www.linkedin.com/in/durgesh-gupta-a75b25186",
+      Facebook: "",
+      Description: "",
+      photo: "/assets/images/image/durgesh gupta.jpg"
     }
   ],
   volunteers: [{
@@ -101,7 +138,7 @@ module.exports = {
     },
     {
       Timestamp: "4/20/2021 17:41:10",
-      Email: "b20¬¬0098@nitsikkim.ac.in",
+      Email: "b200098@nitsikkim.ac.in",
       Name: "Sakshee Rajpoot",
       Email: "b200098@nitsikkim.ac.in",
       Role: "Volunteer",
@@ -165,7 +202,7 @@ module.exports = {
       Email: "b180093@nitsikkim.ac.in",
       Name: "Khushbu Gupta",
       Email: "b180093@nitsikkim.ac.in",
-      Role: "Social Media Team",
+      Role: "Social Media Lead",
       Instagram: "",
       Linkedin: "https://www.linkedin.com/in/khushbu-gupta-a324581a7",
       Facebook: "https://www.facebook.com/profile.php?id=100025378697732",
@@ -175,9 +212,9 @@ module.exports = {
     {
       Timestamp: "4/21/2021 15:00:30",
       Email: "b180087@nitsikkim.ac.in",
-      Name: "ASHWINI SAIKIRAN",
+      Name: "Ashwini Saikiran",
       Email: "b180087@nitsikkim.ac.in",
-      Role: "Resource Management Team",
+      Role: "Resource Management Lead",
       Instagram: "",
       Linkedin: "https://www.linkedin.com/in/ashwini-saikiran-94a218192",
       Facebook: "",
@@ -187,9 +224,9 @@ module.exports = {
     {
       Timestamp: "4/21/2021 17:45:44",
       Email: "b180066@nitsikkim.ac.in",
-      Name: "MIDIDODLA JASWANTH SAI",
+      Name: "Mididodla Jaswanth Sai",
       Email: "b180066@nitsikkim.ac.in",
-      Role: "Editorial Team",
+      Role: "Editorial Lead",
       Instagram: "https://www.instagram.com/jaswanthsai0909/",
       Linkedin: "https://www.linkedin.com/in/jaswanth-sai-mididodla-8229b6172/",
       Facebook: "https://www.facebook.com/jaswanthsai.mididodla",
@@ -201,7 +238,7 @@ module.exports = {
       Email: "b180090@nitsikkim.ac.in",
       Name: "Sanjeev Kumar Sharma",
       Email: "sanjeevkumar9823@gmail.com",
-      Role: "Resource Management Team",
+      Role: "Resource Management Lead",
       Instagram: "https://www.instagram.com/sanjeevshrmaa/",
       Linkedin: "https://www.linkedin.com/in/sanjeevshrmaa/",
       Description: " It is not enough that I should succeed -- others should fail ",
@@ -212,7 +249,7 @@ module.exports = {
       Email: "b180079@nitsikkim.ac.in",
       Name: "Deepak Gupta",
       Email: "b180079@nitsikkim.ac.in",
-      Role: "Technical Team",
+      Role: "Technical Lead",
       Instagram: "",
       Linkedin: "https://linkedin.com/in/deepakgupta191199",
       Facebook: "",
@@ -224,19 +261,19 @@ module.exports = {
       Email: "b180081@nitsikkim.ac.in",
       Name: "Shagir Husain",
       Email: "b180081@nitsikkim.ac.in",
-      Role: "Technical Team",
+      Role: "Technical Lead",
       Instagram: "",
       Linkedin: "https://www.linkedin.com/in/shagir-husain-19a4911a4",
       Facebook: "",
       Description: "",
-      photo: "/assets/images/image/Shagir Husain.png"
+      photo: "/assets/images/image/shagir.jpg"
     },
     {
       Timestamp: "4/20/2021 19:51:00",
       Email: "b190045@nitsikkim.ac.in",
       Name: "Aanchal Soni",
       Email: "b190045@nitsikkim.ac.in",
-      Role: "Editorial Team",
+      Role: "Editorial Lead",
       Instagram: "https://www.instagram.com/aanchalsoni_12_10/",
       Linkedin: "https://www.linkedin.com/in/aanchal-soni-a1a305201",
       Facebook: "https://m.facebook.com/aanchal.soni.1422?ref=bookmarks",
@@ -259,9 +296,9 @@ module.exports = {
   },
   {
     Timestamp: "4/21/2021 13:50:22",
-    Email: "b180091@nitsikkim.ac.in",
+    Email: "b180094@nitsikkim.ac.in",
     Name: "Abadhesh kumar",
-    Email: "b180091@nitsikkim.ac.in",
+    Email: "b180094@nitsikkim.ac.in",
     Role: "Treasurer",
     Instagram: "",
     Linkedin: "",
