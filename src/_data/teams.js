@@ -292,7 +292,7 @@ module.exports = {
     Linkedin: "https://www.linkedin.com/in/anjali-roy-2ab2a616b",
     Facebook: "",
     Description: "",
-    photo: "/assets/images/image/Anjali Roy.png"
+    photo: "/assets/images/image/Anjali Roy1.jpg"
   },
   {
     Timestamp: "4/21/2021 13:50:22",
