@@ -1,8 +1,8 @@
-<footer id="footer" class="footer mt-5">
+<footer id="footer" class="footer pt-2">
     <div class="container">
         <div class="row pt-1">
             <div class="col-md-4 text-center text-md-start my-4">
-                <div>
+                <div class="text-center">
                     <img src="/assets/images/logo.png" class="img-fluid" style="width:100px; height:100px;">
                     <div class="text-white">
                         <h4 class="mt-2">Anuvrat</h4>
@@ -21,7 +21,7 @@
                     <li>
                         <p>
                             <i class="fa-li fa fa-envelope"></i>
-                            <a href="{{'mailto:'+meta.email}}">{{meta.email}}</a>
+                            <a href="{{'mailto:'+meta.email}}" class="text-quaternary">{{meta.email}}</a>
                         </p>
                     </li>
                                     <li>
@@ -48,14 +48,14 @@
                 <div class="text-center">
                     <img src="/assets/images/nit_logo.png" class="img-fluid" style="width:100px; height:100px;">
                     <div class="text-white">
-                        <h4 class="mb-4 mt-2">National Institute Of Technology, Sikkim</h4>
+                        <h4 class="mb-4 mt-2">National Institute Of Technology Sikkim</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-center bg-secondary py-2 mt-2">
-        <span class="text-quaternary">Anuvrat &copy; {{build.timestamp.getFullYear()}}, <a href="{{meta.nitsikkim_site}}" target="_blank">NIT Sikkim</a>
+        <span class="text-quaternary">Anuvrat &copy; {{build.timestamp.getFullYear()}}, <a href="{{meta.nitsikkim_site}}" target="_blank" class="text-white">NIT Sikkim</a>
         </span>
     </div>
 </footer>
