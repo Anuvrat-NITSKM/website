@@ -35,7 +35,7 @@ title: Events - Anuvrat, NIT Sikkim
 <div id="events" class="container">
     <div class="mb-5">
         <div class="heading">Upcoming Events</div>
-        {% for event in events.upcoming %}
+        {% for event in events.upcoming | sort(true, true, 'date') %}
             {{  Accordion(event, loop, true) }}
         {% else %}
             <div class="h4 mb-5">Sorry No Upcoming Events For Now</div>
