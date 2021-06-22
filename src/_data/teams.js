@@ -257,6 +257,18 @@ module.exports = {
       photo: "/assets/images/image/Deepak gupta.png"
     },
     {
+      Timestamp: "4/21/2021 12:42:02",
+      Email: "b180074@nitsikkim.ac.in",
+      Name: "Prashant Prasad",
+      Email: "b180074@nitsikkim.ac.in",
+      Role: "Social Media Lead",
+      Instagram: "",
+      Linkedin: "https://www.linkedin.com/in/prashant-prasad-367217192",
+      Facebook: "",
+      Description: "",
+      photo: "/assets/images/image/prasant.jpeg"
+    },
+    {
       Timestamp: "4/21/2021 10:22:35",
       Email: "b180081@nitsikkim.ac.in",
       Name: "Shagir Husain",
@@ -292,7 +304,7 @@ module.exports = {
     Linkedin: "https://www.linkedin.com/in/anjali-roy-2ab2a616b",
     Facebook: "",
     Description: "",
-    photo: "/assets/images/image/Anjali Roy.png"
+    photo: "/assets/images/image/Anjali Roy1.jpg"
   },
   {
     Timestamp: "4/21/2021 13:50:22",
