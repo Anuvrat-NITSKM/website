@@ -17,18 +17,24 @@
         margin: 5px;
         background-color: rgb(0, 150, 250);
     }
-    .contained{
-     width: 80%;
-     height: auto;
-     margin-left:30px;
-     {# border-radius: 10px !important; #}
-     }
+    .rounded-circle{
+     border-radius: 15% !important;
+    }
+    .contained {
+        width: 80%;
+        height: auto;
+        margin-left: 30px;
+        {
+            # border-radius: 10px !important;
+            #;
+        }
+    }
 </style>
 
 {% macro Card(team, loop) %}
     <div class="col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="mx-auto px-auto ">
-            <div class="contained"><img src="{{team.photo}}" alt="{{team.Name}}" class="img-fluid rounded-circle" style="width=100%"></div>
+            <div class="contained"><img src="{{team.photo}}" alt="{{team.Name}}" class="img-fluid rounded-circle" style="width=100% "></div>
             <div class="intro" style="border-radius:20px">
                 <div class="text-dark h5">{{team.Name}}</div>
                 <div class="dash text-center"></div>
