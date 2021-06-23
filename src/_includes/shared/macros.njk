@@ -11,12 +11,13 @@
 {% macro repoCard(repo, gh) %}
    <div class="col">
         <a href="{{repo.html_url | url}}" class="no-decoration" target="_blank">
-            <div class="card h-100 item bg-primary text-secondary shadow-sm justify-content-around hover-shadow repoCard">
-                  <div class="box">
+            <div class="card h-100 bg-primary text-secondary shadow-sm justify-content-around hover-shadow repoCard">
+                <div class="box">
                     <div class="cover d-flex align-items-center justify-content-center">
                         <div>{{repo.description}}</div>
                     </div>
                     <img src="https://github.com/{{gh.ORG_NAME}}/{{repo.name}}/raw/{{gh.DEFAULT_BRANCH}}/thumbnail.jpg" alt="{{repo.name}}" class="w-100 h-100">
+
                 </div>
                 <div class="card-footer">
                     <div class="text-center h5 d-flex align-items-center justify-content-center" style="min-height: 50px;">

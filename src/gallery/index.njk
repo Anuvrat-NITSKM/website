@@ -14,15 +14,13 @@
 
   <div class="tab-content" id="pills-tabcontent">
     <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
-      <div class="row justify-content-center">
+      <div class="spotlight-group row justify-content-center">
         {% for folder, images in gallery %}
           {% for image in images %}
-            <div class="col-lg-3 col-md-4 col-6 g-0 hover-shadow">
-              <div class="gallery-img m-2">
-                <a data-bs-toggle="modal" href="#imagemodal" class="no-decoration" onclick="showmodal(event)">
-                  <img class="w-100 h-100" src="/assets/images/gallery/{{folder}}/{{image}}"/>
-                </a>
-              </div>
+            <div class="spotlight col-lg-3 col-md-4 col-6 g-0 hover-shadow" data-src="/assets/images/gallery/{{folder}}/{{image}}">
+                <div class="gallery-img m-2">
+                    <img src="/assets/images/gallery/{{folder}}/{{image}}" class="w-100 h-100">
+                </div>
             </div>
           {% endfor %}
         {% endfor %}
@@ -31,49 +29,18 @@
 
     {% for folder, images in gallery %}
       <div class="tab-pane fade" id="{{folder}}" role="tabpanel" aria-labelledby="{{folder}}-tab">
-        <div class="row justify-content-center">
+        <div class="spotlight-group row justify-content-center">
           {% for image in images %}
-            <div class="col-lg-3 col-md-4 col-6 g-0 hover-shadow">
-              <div class="gallery-img m-2">
-                <a data-bs-toggle="modal" href="#imagemodal" class="no-decoration" onclick="showmodal(event)">
-                  <img class="w-100 h-100" src="/assets/images/gallery/{{folder}}/{{image}}"/>
-                </a>
-              </div>
+            <div class="spotlight col-lg-3 col-md-4 col-6 g-0 hover-shadow" data-src="/assets/images/gallery/{{folder}}/{{image}}">
+                <div class="gallery-img m-2">
+                    <img src="/assets/images/gallery/{{folder}}/{{image}}" class="w-100 h-100">
+                </div>
             </div>
           {% endfor %}
         </div>
       </div>
     {% endfor %}
 
-  </div>
-</div>
-
-<div class="modal overflow-hidden" tabindex="-1" data-bs-backdrop="static" id="imagemodal">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content p-0 m-0">
-      <div class="modal-body p-0 m-0 postition-relative">
-        <button type="button" class="btn-close btn-close-white modal-close-btn" data-bs-dismiss="modal" aria-label="close"></button>
-        <div id="modalcarousel" class="carousel slide" data-bs-ride="carousel" >
-          <div class="carousel-inner">
-            {% for folder, images in gallery %}
-              {% for image in images %}
-                <div class="carousel-item">
-                  <img class="w-100 h-100 img-fluid d-block" src="/assets/images/gallery/{{folder}}/{{image}}"/>
-                </div>
-              {% endfor %}
-            {% endfor %}
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#modalcarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#modalcarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -95,7 +62,6 @@
     transition-duration: 0.4s;
     height: 150px;
     animation: popAnim 0.5s;
-    -webkit-backface-visibility: visible;
     backface-visibility: visible;
     img {
         border-radius: 5px;
@@ -104,24 +70,18 @@
     }
   }
 
-  #pills-tab .active {
-      background-color: var(--bs-tertiary);
+  #pills-tab {
+    .nav-item .nav-link {
+        border-radius: 15px;
+    }
+    .active {
+        background-color: var(--bs-senary);
+        color: var(--bs-secondary) !important;
+    }
   }
 
 {% endstyles %}
-
+<script src="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/spotlight.bundle.js"></script>
 <script>
-  function showmodal(e) {
-    const carouselItems = document.querySelector('#modalcarousel .carousel-inner').children
-    const activeSrc = e.target.getAttribute('src')
-    for (const item of carouselItems) {
-      if (item.classList.contains('active')) {
-        item.classList.remove('active')
-      }
-      if ( item.children[0].getAttribute('data-src') === activeSrc || item.children[0].getAttribute('src') === activeSrc) {
-        item.classList.add('active')
-      }
-    }
-    e.preventDefault();
-  }
+
 </script>

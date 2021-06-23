@@ -3,7 +3,7 @@ module.exports = {
     {
       Timestamp: "4/21/2021 13:57:45",
       Email: "",
-      Name: "Prof.Mahesh Chandra Govil",
+      Name: "Prof. Mahesh Chandra Govil",
       Email: "",
       Role: "Patron",
       Instagram: "",
@@ -251,6 +251,7 @@ module.exports = {
       Email: "b180079@nitsikkim.ac.in",
       Role: "Technical Lead",
       Instagram: "",
+      Github: "https://github.com/deepakgupta191199",
       Linkedin: "https://linkedin.com/in/deepakgupta191199",
       Facebook: "",
       Description: "",
@@ -278,7 +279,7 @@ module.exports = {
       Linkedin: "https://www.linkedin.com/in/shagir-husain-19a4911a4",
       Facebook: "",
       Description: "",
-      photo: "/assets/images/image/shagir.jpg"
+      photo: "/assets/images/image/Shagir.jpg"
     },
     {
       Timestamp: "4/20/2021 19:51:00",

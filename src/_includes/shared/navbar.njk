@@ -8,9 +8,9 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 {% for item in navbarLinks %}
                     <li class="nav-item position-relative">
-                        <a class="nav-link" href="{{item.url}}">{{item.name}}
-                            {% if item.name == 'Events' %}
-                                <span class="nav-notifier badge rounded-pill bg-senary text-glow">{{events.upcoming | length}}</span>
+                        <a class="nav-link text-primary" href="{{item.url}}">{{item.name}}
+                            {% if item.name == 'Events' and events.upcoming.length %}
+                                <span class="text-senary nav-notifier badge rounded-pill bg-quaternary">{{events.upcoming | length}}</span>
                             {% endif %}
                         </a>
                     </li>

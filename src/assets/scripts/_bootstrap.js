@@ -1,10 +1,10 @@
 import {
     // Alert,
     // Button,
-    Carousel,
+    // Carousel,
     Collapse,
     // Dropdown,
-    Modal,
+    // Modal,
     // Popover, // Needs manual initialization, code below
     // Scrollspy,
     Tab,

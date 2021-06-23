@@ -21,7 +21,7 @@ module.exports = {
         return arr.filter((d) => d[key] === value)
     },
     timestampFormat: function (timestamp, format, offset=0){
-        // IST time zone added already so subtracting it
+        // Timezone offset should probably be defined
         return moment(timestamp).utcOffset(offset).format(format)
     }
 }
