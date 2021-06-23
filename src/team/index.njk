@@ -18,8 +18,8 @@
 {% macro Card(team, loop) %}
     <div class="col-6 col-lg-4 col-xl-3 teamcard">
         <div class="mx-auto px-auto">
-            <div><img src="{{team.photo}}" alt="{{team.Name}}" class="img img-fluid"></div>
-            <div class="intro mx-auto text-center px-2 py-3 bg-light">
+            <div><img src="{{team.photo}}" alt="{{team.Name}}" class="img img-fluid shadow"></div>
+            <div class="intro mx-auto text-center px-2 py-3 bg-light shadow">
                 <div class="text-dark h6">{{team.Name}}</div>
                 <div class="dash mx-auto my-2 bg-primary"></div>
                 <div class="small text-muted">{{team.Role}}</div>
@@ -27,6 +27,11 @@
                         {% if team.Email %}
                             <a href="mailto:{{team.Email}}" target="_blank" class="no-decoration mx-1">
                                 <i class="fa fa-envelope"></i>
+                            </a>
+                        {% endif %}
+                        {% if team.Linkedin %}
+                            <a href="{{team.Linkedin}}" target="_blank" class="no-decoration mx-1">
+                                <i class="fa fa-linkedin"></i>
                             </a>
                         {% endif %}
                         {% if team.Facebook %}
@@ -39,11 +44,7 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         {% endif %}
-                        {% if team.Linkedin %}
-                            <a href="{{team.Linkedin}}" target="_blank" class="no-decoration mx-1">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        {% endif %}
+
                         {% if team.Github %}
                             <a href="{{team.Github}}" target="_blank" class="no-decoration mx-1">
                                 <i class="fa fa-github"></i>

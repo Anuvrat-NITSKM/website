@@ -23,6 +23,10 @@
 </div>
 
 {% styles %}
+
+$wireColor: darkgray;
+$wireAlpha: 0.5;
+
 #landing{
     #lamp {
         position: relative;
@@ -34,7 +38,7 @@
         margin: 0 auto;
         width: 0.7rem;
         height: 10rem;
-        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        background-image: linear-gradient(rgba($wireColor, $wireAlpha), rgba($wireColor, $wireAlpha)), linear-gradient(rgba($wireColor, $wireAlpha), rgba($wireColor, $wireAlpha)), linear-gradient(rgba($wireColor, $wireAlpha), rgba($wireColor, $wireAlpha));
         background-repeat: no-repeat;
         background-size: 0.15rem 8rem, 0.4rem 0.8rem, 0.7rem 2rem;
         background-position: 50% 0, 0.19rem 8rem, 0 8.8rem;
