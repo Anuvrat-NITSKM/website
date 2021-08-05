@@ -2,6 +2,8 @@ const axios = require('axios')
 const {CHANNEL_ID} = require('./yt.js')
 const { AssetCache } = require('@11ty/eleventy-cache-assets')
 const {timestamp} = require('./build')
+
+const moment = require('moment')
 // Add Non Youtube Playlist Events and Upcoming Events (with date) Here
 const otherEvents = [
     {
@@ -82,10 +84,10 @@ async function getEvents(){
 
 module.exports = async () => {
     console.log("Fetching Youtube Playlists...")
-    const currentDate = timestamp.toISOString()
+    const currentDate = moment(timestamp)
     const allEvents = await getEvents()
     return {
-        upcoming: allEvents.filter((d) => d.date > currentDate),
-        past: allEvents.filter((d) => d.date <= currentDate)
+        upcoming: allEvents.filter((d) => currentDate.isBefore(d.date)),
+        past: allEvents.filter((d) => currentDate.isAfter(d.date))
     }
 }

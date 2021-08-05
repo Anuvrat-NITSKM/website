@@ -1,49 +1,38 @@
-<style>
-
+{%styles%}
+.teamcard{
     .intro {
-        width: 80%;
-        border: 2px solid black;
-        margin: 0 auto 50px;
-        background-color: rgb(255,255,255);
+        width: 90%;
         position: relative;
-        bottom: 15px;
-        padding: 5px;
-        font-family: 'Times New Roman', Times, serif;
-        border-radius: 4px;
+        bottom: 70px;
     }
     .dash {
-        width: 70px;
-        height: 1.5px;
-        margin: 5px;
-        background-color: rgb(0, 150, 250);
+        width: 1.25em;
+        height: 2.5px;
     }
-    .rounded-circle{
-     border-radius: 15% !important;
+    .img{
+        border-radius: 15px;
     }
-    .contained {
-        width: 80%;
-        height: auto;
-        margin-left: 30px;
-        {
-            # border-radius: 10px !important;
-            #;
-        }
-    }
-</style>
+}
+{%endstyles%}
 
 {% macro Card(team, loop) %}
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="mx-auto px-auto ">
-            <div class="contained"><img src="{{team.photo}}" alt="{{team.Name}}" class="img-fluid rounded-circle" style="width=100% "></div>
-            <div class="intro" style="border-radius:20px">
-                <div class="text-dark h5">{{team.Name}}</div>
-                <div class="dash text-center"></div>
-                <div class="d-flex justify-content-between text-dark">
-                    <span class="text-small">{{team.Role}}</span>
-                    <div class="social-links no-decoration">
+    <div class="col-6 col-lg-4 col-xl-3 teamcard">
+        <div class="mx-auto px-auto">
+            <div><img src="{{team.photo}}" alt="{{team.Name}}" class="img img-fluid shadow"></div>
+            <div class="intro mx-auto text-center px-2 py-3 bg-light shadow">
+                <div class="text-dark h6">{{team.Name}}</div>
+                <div class="dash mx-auto my-2 bg-primary"></div>
+                <div class="small text-muted">{{team.Role}}</div>
+                    <div class="text-muted text-dark mt-1">
+
                         {% if team.Email %}
                             <a href="mailto:{{team.Email}}" target="_blank" class="no-decoration mx-1">
                                 <i class="fa fa-envelope"></i>
+                            </a>
+                        {% endif %}
+                        {% if team.Linkedin %}
+                            <a href="{{team.Linkedin}}" target="_blank" class="no-decoration mx-1">
+                                <i class="fa fa-linkedin"></i>
                             </a>
                         {% endif %}
                         {% if team.Facebook %}
@@ -56,13 +45,14 @@
                                 <i class="fa fa-instagram"></i>
                             </a>
                         {% endif %}
-                        {% if team.Linkedin %}
-                            <a href="{{team.Linkedin}}" target="_blank" class="no-decoration mx-1">
-                                <i class="fa fa-linkedin"></i>
+
+                        {% if team.Github %}
+                            <a href="{{team.Github}}" target="_blank" class="no-decoration mx-1">
+                                <i class="fa fa-github"></i>
                             </a>
                         {% endif %}
                     </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -84,7 +74,6 @@
     </div>
     <div class="heading">Meet Our Team</div>
     <div class="container mb-5">
-        {# <div class="heading">Meet Our Team</div> #}
         <div class="row justify-content-around">
             {% for team in teams.advisories %}
 
@@ -95,7 +84,6 @@
     </div>
 
     <div class="container mb-5">
-        {# <div class="heading">Meet Our Team</div> #}
         <div class="row justify-content-around">
             {% for team in teams.head %}
 
@@ -107,7 +95,6 @@
     </div>
 
     <div class="container mb-5">
-        {# <div class="heading">Our Coordinators</div> #}
         <div class="row justify-content-around">
             {% for team in teams.coordinators %}
 
@@ -130,16 +117,5 @@
 
     </div> #}
 
-    {# <div class="container" class="mb-5">
-        <div class="heading">Advisory Committee</div>
-        <div class="row justify-content-around">
-            {% for team in teams.advisories %}
-
-                {{ Card(team, loop) }}
-
-            {% endfor %}
-        </div>
-
-    </div> #}
 
 </div>
