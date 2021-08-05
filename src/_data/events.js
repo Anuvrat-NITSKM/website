@@ -6,6 +6,22 @@ const {timestamp} = require('./build')
 const otherEvents = [
     {
         id: '',
+        name: "Tech-Charades",
+        description: `Learning is a complicated cognitive process. It expands our many capabilities, such as our thinking abilities, imagination, creativity & resilience, which tends to provide us with an excellent opportunity to test our skills in a fun and exciting manner.`,
+        thumbnail: "/assets/images/events/Tech_Charades.png",
+        date: "2021-06-20T17:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
+        name: "Tech Splash",
+        description: `Graphic design is one of the astonishing ways to communicate ideas through typography, imagery, color, and form which makes it stand out as one of the most viable options available, as it serves to convey our ideas in a way that is not only effective but also beautiful.`,
+        thumbnail: "/assets/images/events/Tech splash.png",
+        date: "2021-06-20T17:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
         name: "Bug Quest",
         description: `Debugging plays an extremely crucial role in programming. Understanding the importance of debugging, a pivotal part of learning to code for a programmer, ANUVRAT is organizing a debugging contest, BUG QUEST where the participants can test their program analyzing skills in C, C++ and Python.`,
         thumbnail: "/assets/images/events/bug quest.jpg",
