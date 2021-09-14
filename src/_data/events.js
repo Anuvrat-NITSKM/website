@@ -8,6 +8,14 @@ const moment = require('moment')
 const otherEvents = [
     {
         id: '',
+        name: "Colloquy",
+        description: `Understanding the importance of learning skills, ANUVRAT organized “COLLOQUY”- An Arduino discussion session, which was addressed by the students from the graduating class of 2022. This session included a thoroughly exemplified discussion of Arduino, with its different theoretical and practical attributes. `,
+        thumbnail: "/assets/images/events/colloquy.png",
+        date: "2021-06-20T17:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
         name: "Tech-Charades",
         description: `Learning is a complicated cognitive process. It expands our many capabilities, such as our thinking abilities, imagination, creativity & resilience, which tends to provide us with an excellent opportunity to test our skills in a fun and exciting manner.`,
         thumbnail: "/assets/images/events/Tech_Charades.png",
