@@ -8,9 +8,23 @@ const moment = require('moment')
 const otherEvents = [
     {
         id: '',
+<<<<<<< HEAD
         name: "Colloquy",
         description: `Understanding the importance of learning skills, ANUVRAT organized “COLLOQUY”- An Arduino discussion session, which was addressed by the students from the graduating class of 2022. This session included a thoroughly exemplified discussion of Arduino, with its different theoretical and practical attributes. `,
         thumbnail: "/assets/images/events/colloquy.png",
+=======
+        name: "Science Around Us",
+        description: `To test out hard work and critical thinking, ANUVRAT is organizing an exciting science-based competition “Science Around Us”, where participants can squeeze out their distinguished and intellectual thinking ability about the science & logic behind the things happening around us. `,
+        thumbnail: "/assets/images/events/sciencearoundus.png",
+        date: "2021-06-20T17:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
+        name: "Tech-Spectrum",
+        description: `To showcase versatile abilities in various fields, ANUVRAT is organizing Tech-Spectrum- A Series of Technology Based Events, which is a combination of four different types of  exciting competitions which tends to provide an excellent opportunity for participants to build confidence, display their spectacular ideas, enhance their communication skills and hone their technical skills.`,
+        thumbnail: "/assets/images/events/techspectrum.png",
+>>>>>>> main
         date: "2021-06-20T17:00:00Z",
         link: ``
     },
