@@ -1,0 +1,105 @@
+.display-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+body{
+    height: 100vh;
+    background-color: white;
+}
+.container{
+    width: 350px;
+    height: auto;
+}
+.container form{
+    background-color: white;
+    height: auto;
+    width: 100%;
+    padding: 1rem 1rem;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.first label,input{
+    margin-top: 0.5rem;
+    background-color: rgb(243, 243, 243);
+
+}
+.first input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+}
+.first label{
+    font-size: 1rem;
+}
+.first label span{
+    color: red;
+}
+.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem;
+    margin-left: -1rem;
+}
+.second-1{
+    line-height: 2rem;
+}
+.second-2{
+    line-height: 2rem;
+}
+.second-a{
+    display: flex;
+    margin: 0 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.third{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.switch{
+    border: 1px solid black;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+}
+button{
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+}
+.image-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    line-height: 1rem;
+}
+.add-image input[type="file"]{
+    display: none;
+}
+.add-image label{
+    color: black;
+    /* height: 60px;
+    width: 100px; */
+    padding: 0.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    background-color: rgb(190, 189, 189);
+    font-size: 20px;
+}
+.add-image label i{
+    margin-top: 1px;
+}

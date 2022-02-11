@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+
+.login-main{
+    justify-content: space-evenly;   
+}
+
+/* .login-main-left{
+    background-color: red;
+} */
+
+.login-main-left img{
+    /* width: 50rem; */
+    height: 30rem;
+}
+
+.login-form{
+    /* background-color: red; */
+    width: 30%;
+    height: 60vh;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 3rem 3rem;
+}
+
+.login-form h2{
+    margin: auto;
+    /* margin-bottom: rem; */
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.login-form label{
+    letter-spacing: 0.1rem;
+    margin: 0.2rem 0;
+    
+    font-weight: bold;
+}
+
+.login-form input{
+    width: 100%;
+    padding: 0.3rem 0.3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    /* border-radius: 5px; */
+}
+
+.login-btn{
+    /* margin-top: 0; */
+    padding: 1rem 1.8rem;
+}
+
+.form-footer{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.form-footer-links{
+    width: 100%;
+    /* background-color: yellow; */
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.form-footer-links a{
+    margin-top: 0.5rem;
+    transition: all 0.5s ease ;
+}
+
+.form-footer-links a:hover{
+    color: rgba(255, 0, 0, 0.753);
+    transform: scale(1.04);
+}
