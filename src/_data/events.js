@@ -8,10 +8,26 @@ const moment = require('moment')
 const otherEvents = [
     {
         id: '',
+        name: "Gadget Conferment",
+        description: `Laboratory knowledge is a significant, necessary and pivotal part of the learning process in the world of science education because it’s build-up and honed our confidence regarding theoretical skills in an interesting manner. `,
+        thumbnail: "/assets/images/events/gadgetConferment.jpg",
+        date: "2022-01-09T17:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
+        name: "Colloquy",
+        description: `Understanding the importance of learning skills, ANUVRAT organized “COLLOQUY”- An Arduino discussion session, which was addressed by the students from the graduating class of 2022. This session included a thoroughly exemplified discussion of Arduino, with its different theoretical and practical attributes. `,
+        thumbnail: "/assets/images/events/colloquy.jpg",
+        date: "2021-08-26T17:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
         name: "Science Around Us",
         description: `To test out hard work and critical thinking, ANUVRAT is organizing an exciting science-based competition “Science Around Us”, where participants can squeeze out their distinguished and intellectual thinking ability about the science & logic behind the things happening around us. `,
         thumbnail: "/assets/images/events/sciencearoundus.png",
-        date: "2021-06-20T17:00:00Z",
+        date: "2021-11-20T17:00:00Z",
         link: ``
     },
     {
@@ -19,7 +35,7 @@ const otherEvents = [
         name: "Tech-Spectrum",
         description: `To showcase versatile abilities in various fields, ANUVRAT is organizing Tech-Spectrum- A Series of Technology Based Events, which is a combination of four different types of  exciting competitions which tends to provide an excellent opportunity for participants to build confidence, display their spectacular ideas, enhance their communication skills and hone their technical skills.`,
         thumbnail: "/assets/images/events/techspectrum.png",
-        date: "2021-06-20T17:00:00Z",
+        date: "2021-10-01T17:00:00Z",
         link: ``
     },
     {
@@ -27,7 +43,7 @@ const otherEvents = [
         name: "Tech-Charades",
         description: `Learning is a complicated cognitive process. It expands our many capabilities, such as our thinking abilities, imagination, creativity & resilience, which tends to provide us with an excellent opportunity to test our skills in a fun and exciting manner.`,
         thumbnail: "/assets/images/events/Tech_Charades.png",
-        date: "2021-06-20T17:00:00Z",
+        date: "2021-07-24T17:00:00Z",
         link: ``
     },
     {
@@ -35,7 +51,7 @@ const otherEvents = [
         name: "Tech Splash",
         description: `Graphic design is one of the astonishing ways to communicate ideas through typography, imagery, color, and form which makes it stand out as one of the most viable options available, as it serves to convey our ideas in a way that is not only effective but also beautiful.`,
         thumbnail: "/assets/images/events/Tech splash.png",
-        date: "2021-06-20T17:00:00Z",
+        date: "2021-07-11T17:00:00Z",
         link: ``
     },
     {
