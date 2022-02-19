@@ -26,7 +26,7 @@ const otherEvents = [
         id: '',
         name: "Science Around Us",
         description: `To test out hard work and critical thinking, ANUVRAT is organizing an exciting science-based competition “Science Around Us”, where participants can squeeze out their distinguished and intellectual thinking ability about the science & logic behind the things happening around us. `,
-        thumbnail: "/assets/images/events/sciencearoundus.png",
+        thumbnail: "/assets/images/events/sciencearoundus.jpg",
         date: "2021-11-20T17:00:00Z",
         link: ``
     },
@@ -34,7 +34,7 @@ const otherEvents = [
         id: '',
         name: "Tech-Spectrum",
         description: `To showcase versatile abilities in various fields, ANUVRAT is organizing Tech-Spectrum- A Series of Technology Based Events, which is a combination of four different types of  exciting competitions which tends to provide an excellent opportunity for participants to build confidence, display their spectacular ideas, enhance their communication skills and hone their technical skills.`,
-        thumbnail: "/assets/images/events/techspectrum.png",
+        thumbnail: "/assets/images/events/techspectrum.jpg",
         date: "2021-10-01T17:00:00Z",
         link: ``
     },
@@ -42,7 +42,7 @@ const otherEvents = [
         id: '',
         name: "Tech-Charades",
         description: `Learning is a complicated cognitive process. It expands our many capabilities, such as our thinking abilities, imagination, creativity & resilience, which tends to provide us with an excellent opportunity to test our skills in a fun and exciting manner.`,
-        thumbnail: "/assets/images/events/Tech_Charades.png",
+        thumbnail: "/assets/images/events/Tech_Charades.jpg",
         date: "2021-07-24T17:00:00Z",
         link: ``
     },
@@ -50,7 +50,7 @@ const otherEvents = [
         id: '',
         name: "Tech Splash",
         description: `Graphic design is one of the astonishing ways to communicate ideas through typography, imagery, color, and form which makes it stand out as one of the most viable options available, as it serves to convey our ideas in a way that is not only effective but also beautiful.`,
-        thumbnail: "/assets/images/events/Tech splash.png",
+        thumbnail: "/assets/images/events/Tech splash.jpg",
         date: "2021-07-11T17:00:00Z",
         link: ``
     },
