@@ -8,6 +8,22 @@ const moment = require('moment')
 const otherEvents = [
     {
         id: '',
+        name: "Bug Quest Season - 2",
+        description: `It's time to summon your inner coding maestro, enhance your debugging skills and get involved in competitive coding. To challenge the programming mastery of the students, ANUVRAT is organising Bug Quest 2.O, the second edition of the formidable debugging contest. Recognising the tremendous response from the students for the previous edition that ensued such fierce competition, we wish to continue this legacy further. `,
+        thumbnail: "/assets/images/events/bugquest_2.png",
+        date: "2022-09-15T07:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
+        name: "Vimrishyotsava Season - 2",
+        description: `The season 1 of Vimrishyotsava an erudite festival of discussion ended on a remarkable note and the provision of utter professionalism through the experiences of our great alumni network acted as a chisel to our minds. Therefore, we hereby announce “Vimrishyotsava 2.O - An Erudite Festival of Discussion”,  the 2nd learning season of an alumni talk series with some more brilliant minds of NIT Sikkim from department of Electronics and Communication Engineering.`,
+        thumbnail: "/assets/images/events/Vimrishyotsava_2.jpeg",
+        date: "2022-06-26T10:00:00Z",
+        link: ``
+    },
+    {
+        id: '',
         name: "Gadget Conferment",
         description: `Laboratory knowledge is a significant, necessary and pivotal part of the learning process in the world of science education because it’s build-up and honed our confidence regarding theoretical skills in an interesting manner. `,
         thumbnail: "/assets/images/events/gadgetConferment.jpg",
